@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <GeneCategoryDef>
+    <defName>Angel_genes</defName>
+    <label>angel genes</label>
+    <displayPriorityInXenotype>201</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

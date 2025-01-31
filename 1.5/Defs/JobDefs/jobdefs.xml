@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+     <JobDef>
+    <defName>FA_TalkAtTarget</defName>
+    <driverClass>FallenAngel.JobDriver_TargetedInteractionSpree</driverClass>
+    <reportString>talking at TargetA.</reportString> 
+  </JobDef>
+
+<!--feeding behaviors-->
+
+  <JobDef>
+    <defName>FA_GettingAffectionFrom</defName>
+    <driverClass>FallenAngel.JobDriver_GetAffection</driverClass>
+    <reportString>feeding on TargetA.</reportString> 
+  </JobDef>
+
+<!-- obsessive watch in bed-->
+
+<JoyGiverDef>
+    <defName>FA_Joy_ObsessiveWatchInBed</defName>
+    <giverClass>FallenAngel.JoyGiver_ObsessiveWatchInBed</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>FA_ObsessiveWatchInBed</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef>
+
+  <JobDef>
+    <defName>FA_ObsessiveWatchInBed</defName>
+    <driverClass>FallenAngel.JobDriver_ObsessiveWatchInBed</driverClass>
+    <reportString>watching TargetA sleep.</reportString>
+    <joyDuration>1500</joyDuration>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>Meditative</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+<!--obsessive following-->
+<JoyGiverDef>
+    <defName>FA_Joy_ObsessiveFollow</defName>
+    <giverClass>FallenAngel.JoyGiver_ObsessiveFollow</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>FA_ObsessiveFollow</jobDef>
+    <joyKind>Social</joyKind>
+  </JoyGiverDef>
+
+  <JobDef>
+		<defName>FA_ObsessiveFollow</defName>
+		<driverClass>FallenAngel.JobDriver_ObsessiveFollow</driverClass>
+		<reportString>obsessively following TargetA.</reportString>
+		<joySkill>Social</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyKind>Social</joyKind>
+		<joyDuration>4000</joyDuration>
+	</JobDef>
+
+  <JoyGiverDef>
+    <defName>FA_Joy_ObsessiveSleepInOthersBed</defName>
+    <giverClass>FallenAngel.JoyGiver_LayInObessivesBed</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>FA_ObsessiveSleepInOthersBed</jobDef>
+    <joyKind>Social</joyKind>
+  </JoyGiverDef>
+
+  <JobDef>
+		<defName>FA_ObsessiveSleepInOthersBed</defName>
+		<driverClass>FallenAngel.JobDriver_LayInObsessivesBed</driverClass>
+		<reportString>obsessively following TargetA.</reportString>
+		<joySkill>Social</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyKind>Social</joyKind>
+		<joyDuration>4000</joyDuration>
+	</JobDef>
+</Defs>

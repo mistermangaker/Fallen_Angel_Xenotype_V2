@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <MentalStateDef ParentName="BaseMentalState">
+    <defName>FA_OneSideConversation</defName>
+    <stateClass>FallenAngel.MentalState_TargetedInteractionSpree</stateClass>
+    <workerClass>MentalStateWorker_TargetedInsultingSpree</workerClass>
+    <label>one sided conversation</label>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockRandomInteraction>false</blockRandomInteraction>
+    <requiredCapacities>
+        <li>Talking</li>
+    </requiredCapacities>
+    <minTicksBeforeRecovery>25000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>45000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.166</recoveryMtbDays>
+    <recoverFromSleep>true</recoverFromSleep>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <nameColor>(1, 0.70, 0.98)</nameColor>
+    <recoveryMessage>{0} is satisfied with their yapping spree and has calmed down</recoveryMessage>
+    <beginLetter>due to lack of affection {0} has spontaniously developed a crippling need to socialize and will find a pawn to socialize with. [PAWN_pronoun] will follow them around and hold a one sided conversation with them until [PAWN_pronoun] are satisfied.</beginLetter>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <baseInspectLine>Mental state: obsessive yapping</baseInspectLine>
+    <allowBeatfire>true</allowBeatfire>
+  </MentalStateDef>
+
+<MentalBreakDef>
+    <defName>FA_MentalBreak_ObsessiveBondFormed</defName>
+    <label>obsessive bond formed</label>
+    <baseCommonality>1</baseCommonality>
+    <intensity>Extreme</intensity>
+    <workerClass>FallenAngel.MentalBreakWorker_ObsessiveBondForm</workerClass>
+    <requiredGene>Gene_ObsessiveBonding</requiredGene>
+  </MentalBreakDef>
+
+</Defs>

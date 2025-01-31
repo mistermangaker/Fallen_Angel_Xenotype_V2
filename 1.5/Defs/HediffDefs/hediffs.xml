@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>FA_FeelingWoozy</defName>
+    <label>feeling woozy</label>
+    <description>After-effects of having your mental energy drained. it can be very dangerous</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0</initialSeverity>
+     <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
+    <stages>
+     <li>
+        <minSeverity>0.0</minSeverity>
+        <label>woozy</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <label>very woozy</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <label>sick</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>-0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      </stages>
+    
+  </HediffDef>
+  
+ <HediffDef>
+    <defName>FA_FullBodyHug</defName>
+    <label>Draining Hug</label>
+    <hediffClass>HediffWithComps</hediffClass>
+  
+    <description>full body contact with a psycaster has drained this person of their mental energy</description>
+    <tendable>false</tendable>
+    
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks><!-- 6 hours -->
+      </li>
+    </comps>
+  </HediffDef>
+
+    <HediffDef>
+    <defName>FA_SmoochMarks</defName>
+    <label>kiss mark</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <labelNoun>kiss mark</labelNoun>
+    <description>a Psychical mark burned into the skin caused by recieving a kiss there to drain mental energy. It doesnt hurt but it makes you feel fuzzy in the head. a much more intense version of a psychic hug</description>
+    <tendable>false</tendable>
+    
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks><!-- 6 hours -->
+      </li>
+    </comps>
+  </HediffDef>
+
+
+
+  <HediffDef>
+    <defName>FA_AttentionCraving</defName>
+    <label>affection craving</label>
+    <description>due to not getting enough attention recently. this person is dealing with a deep feeling of loneliness and the need to be affectionate towards others</description>
+    <hediffClass>FallenAngel.Hediff_AffectionCraving</hediffClass>
+    <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>minor</label>
+        <mentalStateGivers>
+          <li>
+            <mentalState>FA_OneSideConversation</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.35</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>FA_OneSideConversation</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.7</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>FA_OneSideConversation</mentalState>
+            <mtbDays>0.3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FallenAngel.HediffCompProperties_SeverityFromAffection">
+        <severityPerHourEmpty>0.05</severityPerHourEmpty>
+        <severityPerHourAffection>-0.01</severityPerHourAffection>
+      </li>
+    </comps>
+  </HediffDef>
+
+
+
+</Defs>

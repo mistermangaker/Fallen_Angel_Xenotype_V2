@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerFallenAngel</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Miss Mononoke</li>
+        <li>r_name->Shadaddy deer</li>
+        <li>r_name->Rizzmia 'The Rizzler' Rizzledizle</li>
+        <li>r_name(p=15)->[firstName] [lastName]</li>
+        <li>r_name(p=7)->[firstName] '[GenName]' [lastName]</li>
+
+        <li>firstName(p=10)->Shamia</li>
+        <li>firstName->Sha[Mid]</li>
+        <li>firstName->[Mid]mia</li>
+        <li>firstName->[GenName]</li>
+       
+        <li>GenName(p=5)->Shamarvin</li>
+        <li>GenName->Shah My Ah</li>
+        <li>GenName->Shapartner</li>
+        <li>GenName->ShamarioLive</li>
+        <li>GenName->Shammy</li>
+        <li>GenName->Shamingus</li>
+        <li>GenName->Pink Thing</li>
+        <li>GenName->Sham Sham</li>
+        <li>GenName->Shameowmeow</li>
+        <li>GenName->Shanono</li>
+        <li>GenName(p=5)->Sigmia</li>
+        <li>GenName->Shamaya</li>
+        <li>GenName(p=5)->Shamus</li>
+        <li>GenName->rizz</li>
+        <li>GenName->mia</li>
+
+        <li>Mid->stinky</li>
+        <li>Mid->draw</li>
+        <li>Mid->smell</li>
+        <li>Mid->dork</li>
+        <li>Mid->baka</li>
+        <li>Mid->uwu</li>
+        <li>Mid->arist</li>
+        <li>Mid->short</li>
+        <li>Mid->scared</li>
+        <li>Mid->cry</li>
+        <li>Mid->daddydeer</li>
+        <li>Mid->rizz</li>
+
+        <li>lastName(p=20)->Live</li>
+        <li>lastName(p=5)->Live_</li>
+        <li>lastName->Deer</li>
+        <li>lastName->Rizzed</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+
+</Defs>

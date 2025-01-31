@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   	<ThinkTreeDef>
+        <defName>FA_MentalState_OneSidedConversation</defName>
+        <insertTag>InMentalState</insertTag>
+        <insertPriority>100</insertPriority>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="ThinkNode_ConditionalMentalStateClass">
+          <stateClass>FallenAngel.MentalState_TargetedInteraction</stateClass>
+          <subNodes>
+            <li Class="FallenAngel.JobGiver_TargetedInteractionSpree" />
+            <li Class="ThinkNode_PrioritySorter">
+              <subNodes>
+                <li Class="JobGiver_GetFood">
+                  <maxLevelPercentage>0.05</maxLevelPercentage>
+                </li>
+                <li Class="JobGiver_GetRest">
+                  <maxLevelPercentage>0.15</maxLevelPercentage>
+                </li>
+                <li Class="FallenAngel.JobGiver_GetAffection" />
+              </subNodes>
+            </li>
+            <li Class="JobGiver_WanderColony" />
+          </subNodes>
+        </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+    	<ThinkTreeDef>
+        <defName>FA_GetAffection</defName>
+        <insertTag>Humanlike_PostDuty</insertTag>
+        <insertPriority>100</insertPriority>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="FallenAngel.JobGiver_GetAffection" />
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+</Defs>
+

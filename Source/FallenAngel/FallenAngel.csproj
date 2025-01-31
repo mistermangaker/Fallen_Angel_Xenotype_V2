@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B0496D2-A6D2-4C5E-A3F8-4A2E9078D1A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FallenAngel</RootNamespace>
+    <AssemblyName>FallenAngel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alerts\Alert_LowAffection.cs" />
+    <Compile Include="Affection\CompAbilityEffect_GiveSmoochies.cs" />
+    <Compile Include="Affection\CompAbility_AffectionCost.cs" />
+    <Compile Include="Affection\CompProperties_AbilityAffectionCost.cs" />
+    <Compile Include="Affection\CompProperties_AbilityGiveSmoochies.cs" />
+    <Compile Include="Affection\FallenAngel_Utility.cs" />
+    <Compile Include="DefOf\FA_DefOfSmoochLocations.cs" />
+    <Compile Include="DefOf\FA_GeneDefOf.cs" />
+    <Compile Include="DefOf\FA_HediffDefOf.cs" />
+    <Compile Include="DefOf\FA_InteractionDefOf.cs" />
+    <Compile Include="DefOf\FA_JobDefOf.cs" />
+    <Compile Include="DefOf\FA_StatDefOf.cs" />
+    <Compile Include="DefOf\FA_ThoughtDefOf.cs" />
+    <Compile Include="Affection\Gene_Affection.cs" />
+    <Compile Include="Affection\Gene_Gizmo_ResourceAffection.cs" />
+    <Compile Include="FallenAngel_Mod.cs" />
+    <Compile Include="ObbessiveBehaviors\JobDriver_LayInObsessivesBed.cs" />
+    <Compile Include="ObbessiveBehaviors\JobDriver_ObsessiveFollow.cs" />
+    <Compile Include="ObbessiveBehaviors\JobDriver_ObsessiveWatchInBed.cs" />
+    <Compile Include="ObbessiveBehaviors\JoyGiver_LayInObessivesBed.cs" />
+    <Compile Include="ObbessiveBehaviors\JoyGiver_ObsessionMaster.cs" />
+    <Compile Include="ObbessiveBehaviors\JoyGiver_ObsessiveFollow.cs" />
+    <Compile Include="ObbessiveBehaviors\JoyGiver_ObsessiveWatchInBed.cs" />
+    <Compile Include="ObbessiveBehaviors\ObsessiveBehaviors_Utility.cs" />
+    <Compile Include="obessivebonding\Gene_ObsessiveBonding.cs" />
+    <Compile Include="Affection\HediffCompProperties_SeverityFromAffection.cs" />
+    <Compile Include="Affection\HediffComp_SeverityFromAffection.cs" />
+    <Compile Include="Affection\Hediff_AffectionCraving.cs" />
+    <Compile Include="Affection\JobDriver_GetAffection.cs" />
+    <Compile Include="JobDriver_TargetedInteractionSpree.cs" />
+    <Compile Include="Affection\JobGiver_GetAffection.cs" />
+    <Compile Include="JobGiver_TargetedInteractionSpree.cs" />
+    <Compile Include="MentalState_TargetedInteraction.cs" />
+    <Compile Include="MentalState_TargetedInteractionSpree.cs" />
+    <Compile Include="NoColorApparel.cs" />
+    <Compile Include="obessivebonding\Hediff_ObessiveBond_Giver.cs" />
+    <Compile Include="obessivebonding\Hediff_ObsessiveBond_Base.cs" />
+    <Compile Include="obessivebonding\Hediff_ObsessiveBond_Receiver.cs" />
+    <Compile Include="obessivebonding\MentalState_ObsessiveBondForm.cs" />
+    <Compile Include="obessivebonding\ObsessiveBondingUtility.cs" />
+    <Compile Include="obessivebonding\ThoughtWorker_GiverIsUnhappy.cs" />
+    <Compile Include="Placeworker_OnGroundOnly.cs" />
+    <Compile Include="Placeworker_OnWall.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

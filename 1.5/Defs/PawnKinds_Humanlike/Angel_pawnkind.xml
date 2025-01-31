@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>FallenAngel_colonist</defName>
+    <label>colonist</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+    <nameMaker>NamerFallenAngel</nameMaker>
+    <fixedGender>Female</fixedGender>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <xenotypeSet Inherit="False">
+        <xenotypeChances>
+            <FA_fallenangel MayRequire="Ludeon.RimWorld.Biotech">999</FA_fallenangel>
+        </xenotypeChances>
+    </xenotypeSet>
+    
+    <maxGenerationAge>30</maxGenerationAge>
+    <apparelTags>
+      <li>FallenAngel_Outfit</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <techHediffsDisallowTags>
+      <li>PainCauser</li>
+    </techHediffsDisallowTags>
+    <initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
+
+
+  <PawnKindDef>
+    <defName>sweetheart</defName>
+    <label>sweetheart</label>
+    <labelMale>sweetheart</labelMale>
+    <labelFemale>sweetheartess</labelFemale>
+    <labelPlural>sweethearties</labelPlural>
+    <race>Human</race>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <combatPower>50</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <isFighter>true</isFighter>
+    <nameMaker>SweetHeart_NameMaker</nameMaker>
+      <backstoryFiltersOverride>
+        <li>
+            <categoriesChildhood>
+                <li>Tribal</li>
+            </categoriesChildhood>
+            <categoriesAdulthood>
+                <li>Offworld</li>
+                <li>Outlander</li>
+                <li>Outsider</li>
+            </categoriesAdulthood>
+        </li>
+    </backstoryFiltersOverride>
+    <requiredWorkTags>
+        <li>Violent</li>
+        <li>Artistic</li>
+        <li>Caring</li>
+    </requiredWorkTags>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>1010~1500</weaponMoney>
+    <forceWeaponQuality>Masterwork</forceWeaponQuality>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+      <inventoryOptions>
+      <subOptionsTakeAll>
+          <li>
+              <thingDef>MealSurvivalPack</thingDef>
+              <countRange>10</countRange>
+          </li>
+          <li>
+              <thingDef>MedicineUltratech</thingDef>
+              <countRange>10</countRange>
+          </li>
+          <li>
+              <thingDef>SmokeleafJoint</thingDef>
+              <countRange>10</countRange>
+          </li>
+      </subOptionsTakeAll>
+  </inventoryOptions>
+    <!--<apparelMoney>500~1000</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>-->
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+      <li>Apparel_Duster</li>
+      <li>Apparel_FlakVest</li>
+      <li>Apparel_sunglasses</li>
+      
+      
+    </apparelRequired>
+            <apparelDisallowTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+            <li>BeltDefenseTox</li>
+            <li>SpacerMilitary</li>
+            <li>BeltDefensePop</li>
+            <li>SpacerMilitary</li>
+        </apparelDisallowTags>
+    <apparelColor>(58,58,58)</apparelColor>
+    <ignoreIdeoApparelColors>true</ignoreIdeoApparelColors>
+    <favoriteColor>(58,58,58)</favoriteColor>
+    <initialWillRange>0~0</initialWillRange>
+    <initialResistanceRange>0~2</initialResistanceRange>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <fixedGender>Male</fixedGender>
+    <skills>
+        <li>
+            <skill>Shooting</skill>
+            <range>10~20</range>
+        </li>
+        <li>
+            <skill>Melee</skill>
+            <range>17~20</range>
+        </li>
+        <li>
+            <skill>Artistic</skill>
+            <range>10~20</range>
+        </li>
+        <li>
+            <skill>Medicine</skill>
+            <range>7~15</range>
+        </li>
+    </skills>
+    <forcedTraits Inherit="False">
+        <NaturalMood>1</NaturalMood>
+        <Tough />
+        <Bloodlust />
+        <Beauty>2</Beauty>
+    </forcedTraits>
+    <disallowedTraits>
+        <li>Wimp</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+
+    <RulePackDef>
+      <defName>SweetHeart_NameMaker</defName>
+      <rulePack>
+          <rulesStrings>
+              <li>r_name(p=10)->Sweet sweetheart Heart</li>
+              <li>r_name->Sweetheart Sweetheart The [Num]</li>
+              
+              <li>Num(p=25)->69th</li>
+              
+              <li>Num->2nd</li>
+              <li>Num->3rd</li>
+              <li>Num->4th</li>
+              <li>Num->5th</li>
+              <li>Num->6th</li>
+              <li>Num->7th</li>
+              <li>Num->8th</li>
+              <li>Num->9th</li>
+              <li>Num->10th</li>
+              <li>Num->11th</li>
+              <li>Num->12th</li>
+              <li>Num->13th</li>
+              <li>Num->14th</li>
+              <li>Num->15th</li>
+              <li>Num->16th</li>
+              <li>Num->17th</li>
+              <li>Num->18th</li>
+              <li>Num->19th</li>
+              <li>Num->20th</li>
+              <li>Num->21st</li>
+              <li>Num->22nd</li>
+              <li>Num->23rd</li>
+              <li>Num->24th</li>
+              <li>Num->25th</li>
+              <li>Num->26th</li>
+              <li>Num->27th</li>
+              <li>Num->28th</li>
+              <li>Num->29th</li>
+              <li>Num->30th</li>
+              <li>Num->31st</li>
+              <li>Num->32nd</li>
+              <li>Num->33rd</li>
+              <li>Num->34th</li>
+              <li>Num->35th</li>
+              <li>Num->36th</li>
+              <li>Num->37th</li>
+              <li>Num->38th</li>
+              <li>Num->39th</li>
+              <li>Num->40th</li>
+              <li>Num->41st</li>
+              <li>Num->42nd</li>
+              <li>Num->43rd</li>
+              <li>Num->44th</li>
+              <li>Num->45th</li>
+              <li>Num->46th</li>
+              <li>Num->47th</li>
+              <li>Num->48th</li>
+              <li>Num->49th</li>
+              <li>Num->50th</li>
+          </rulesStrings>
+      </rulePack>
+    </RulePackDef>
+
+
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_sunglasses</defName>
+    <label>cowboyhat + sunglasses combo</label>
+    <description>A sick ass pair of sunglasses</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Aparrel/Sunglasses/CowboyHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+      <costList>
+      <Plasteel>5</Plasteel>
+    </costList>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>1.4</Mass>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.10</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Aparrel/Sunglasses/CowboyHat</wornGraphicPath>
+      <!--<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>-->
+      <layers> 
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+    </recipeMaker>
+    <tradeTags>
+      <li>Armor</li>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+
+
+
+</Defs>

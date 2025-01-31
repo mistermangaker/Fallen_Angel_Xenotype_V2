@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+      <defName>FA_BuildingsPaintings</defName>
+      <label>Paintings</label>
+      <parent>BuildingsArt</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>FA_Apparel</defName>
+      <label>fallen angel apparel</label>
+      <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>FA_Headgear</defName>
+        <label>fallen angel headgear</label>
+        <parent>Headgear</parent>
+      </ThingCategoryDef>
+
+          <ThingCategoryDef>
+        <defName>FA_Upgrades</defName>
+        <label>fallen angel upgrades</label>
+        <parent>Root</parent>
+      </ThingCategoryDef>
+
+</Defs>

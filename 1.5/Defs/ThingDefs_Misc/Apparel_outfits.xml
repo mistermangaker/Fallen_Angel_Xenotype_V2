@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+     <ThingDef Name="FallenAngelApparel" ParentName="ApparelMakeableBase" Abstract="True">
+        <techLevel>Industrial</techLevel>
+        <thingClass>FallenAngel.NoColorApparel</thingClass>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+            <displayPriority>515</displayPriority>
+        </recipeMaker>
+           
+	    <costStuffCount>80</costStuffCount>
+		<stuffCategories>
+		    <li>Fabric</li>
+		    <li>Leathery</li>
+		</stuffCategories>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+            
+        <tradeTags>
+            <li>AngelClothing</li>
+            <li>BasicClothing</li>
+        </tradeTags>
+     </ThingDef>
+
+     <ThingDef ParentName="FallenAngelApparel">
+    <defName>FA_FallenAngelOufit_one</defName>
+    <description>placeholder</description>
+    <label>hoodie and skirt</label>
+    <graphicData>
+      <texPath>Aparrel/Swe_shamia_outfit/dress3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.7</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.70</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+   <equippedStatOffsets>
+   	  <MoveSpeed>2</MoveSpeed>
+      <PawnBeauty>0.1</PawnBeauty>
+   </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Aparrel/Swe_shamia_outfit/dress3</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+        <li>Middle</li>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>FallenAngel_Outfit</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+
+  </ThingDef>
+
+	<ThingDef ParentName="FallenAngelApparel">
+	    <defName>FA_FallenAngelMaidOutfit</defName>
+	    <description>placeholder</description>
+	    <label>maidmia Outfit</label>
+	    <graphicData>
+	      <texPath>Aparrel/Swe_maidmia_outfit/dress3</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	    </graphicData>
+	    <statBases>
+            <MaxHitPoints>140</MaxHitPoints>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>1.0</Mass>
+            <StuffEffectMultiplierArmor>0.03</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.0</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <CleaningSpeed>5</CleaningSpeed>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </equippedStatOffsets>
+            <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Aparrel/Swe_maidmia_outfit/dress3</wornGraphicPath>
+            <layers>
+                <li>Shell</li>
+                <li>Middle</li>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>FallenAngel_Outfit</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+	    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="FallenAngelApparel">
+    <defName>FA_FallenAngelMaidHeadress</defName>
+    <description>placeholder</description>
+    <label>Maid Headress</label>
+    <graphicData>
+        <texPath>Aparrel/swe_shamia_maidaheadband/headress</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories>
+        <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+        <MaxHitPoints>160</MaxHitPoints>
+        <WorkToMake>2000</WorkToMake>
+        <Mass>1.7</Mass>
+        <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    	<CleaningSpeed>5</CleaningSpeed>
+    </equippedStatOffsets>
+    <apparel>
+    <bodyPartGroups>
+        <li>FullHead</li>
+    </bodyPartGroups>
+    <wornGraphicPath>Aparrel/swe_shamia_maidaheadband/headress</wornGraphicPath>
+    <layers>
+        <li>Overhead</li>
+    </layers>
+    <tags>
+        <li>FallenAngel_Outfit</li>
+    </tags>
+    <defaultOutfitTags>
+        <li>Worker</li>
+    </defaultOutfitTags>
+    <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+
+
+</Defs>

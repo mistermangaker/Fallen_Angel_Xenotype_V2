@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <GeneDef>
+        <defName>Gene_ObsessiveBonding</defName>
+        <label>deleriophagey</label>
+        <description>Carriers of this gene have the capability to develop a parasitic psychic bond with another person and s</description>
+        <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+        <geneClass>FallenAngel.Gene_ObsessiveBonding</geneClass>
+        <prerequisite>FA_Gene_Affection</prerequisite>
+        <displayCategory>Hemogen</displayCategory>
+        <resourceLossPerDay>0.02</resourceLossPerDay>
+        <biostatMet>4</biostatMet>
+        <minAgeActive>13</minAgeActive>
+    </GeneDef>
+
+    <!--indev: perhaps the ability to regain affection by hurting their obsessive bond?-->
+    <!--<GeneDef>
+        <defName>Gene_Obsessive_devourer</defName>
+        <label>deleriophagey</label>
+        <description>Carriers of this gene have the capability to develop a parasitic psychic bond with another person and s</description>
+        <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+        <prerequisite>Gene_ObsessiveBonding</prerequisite>
+        <displayCategory>Hemogen</displayCategory>
+        <resourceLossPerDay>0.02</resourceLossPerDay>
+        <biostatMet>4</biostatMet>
+        <minAgeActive>13</minAgeActive>
+    </GeneDef>-->
+
+</Defs>

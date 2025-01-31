@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   	<XenotypeIconDef>
+		<defName>Fallen_angel_icon1</defName>
+		<texPath>UI/Gene_Icons/FallenAngelicUI_icon</texPath>
+	</XenotypeIconDef>
+    
+</Defs>

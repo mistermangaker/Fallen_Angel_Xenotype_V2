@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityCategoryDef>
+    <defName>FA_FallenAngel</defName>
+    <displayOrder>1000</displayOrder>
+  </AbilityCategoryDef>
+
+
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>FA_Smooch</defName>
+    <label>Smooch</label>
+    <description>Bite the target and extract hemogen directly from their blood. The target will lose blood and will be horrified by the interaction, but will be otherwise unharmed. A fast-acting coagulant will seal the wound to prevent bleeding.\n\nCan only target non-hemogenic humans. Hemogen gain is affected by the target's body size.</description>
+    <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+    <category>FA_FallenAngel</category>
+    <displayOrder>100</displayOrder>
+    <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+    <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>2</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>true</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FallenAngel.CompProperties_AbilityGiveSmoochies">
+        <affectionGain>0.2</affectionGain>
+        <thoughtDefToGiveRecipient>FA_AbilitySmoochedRecipient</thoughtDefToGiveRecipient>
+        <opinionThoughtToGiveRecipient>FA_AbilitySmoochedRecipient_Social</opinionThoughtToGiveRecipient>
+        <thoughtDefToGiveInitiator>FA_AbilitySmoochedInitiator</thoughtDefToGiveInitiator>
+        <opinionThoughtDefToGiveInitiator>FA_AbilitySmoochedInitiator_Social</opinionThoughtDefToGiveInitiator>
+        <thoughtDefToGiveInitiator_LowSocialOpinion>FA_AbilitySmoochedInitiator_LowSocialOpinion</thoughtDefToGiveInitiator_LowSocialOpinion>        
+      </li>
+      <li Class="CompProperties_AbilityRequiresCapacity">
+        <capacity>Eating</capacity>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+ <AbilityDef>
+    <defName>angelLongjump</defName>
+    <label>angelic flight</label>
+    <description>Fly a short distance using the power of the wings. It uses no hemogen to do this</description>
+    <iconPath>UI/Abilities_Icon/FallenAngelLongJump</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>19.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>angel_take_off</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+  </AbilityDef>
+
+
+</Defs>

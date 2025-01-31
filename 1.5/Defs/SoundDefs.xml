@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>Angel_Call</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Voices/laugh_2</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>19.56522~25.52174</volumeRange>      
+        <pitchRange>0.8516304~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Angel_hurt</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+						<clipFolderPath>gasp</clipFolderPath>
+					</li>
+        </grains>      
+        <volumeRange>19.56522~40.52174</volumeRange>      
+        <pitchRange>0.8516304~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Angel_death</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Voices/ah</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>19.56522~25.52174</volumeRange>      
+        <pitchRange>0.8516304~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Angel_JumpStart</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>yippee</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>5~7</volumeRange>      
+        <pitchRange>0.99~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+<SoundDef>
+    <defName>angel_take_off</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+						<clipFolderPath>takeoff</clipFolderPath>
+					</li>
+        </grains>      
+        <volumeRange>5~7</volumeRange>      
+        <pitchRange>0.8516304~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</Defs>

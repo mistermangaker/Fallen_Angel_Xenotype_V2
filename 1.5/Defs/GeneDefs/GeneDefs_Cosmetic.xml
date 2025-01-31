@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+   <GeneDef ParentName="GeneEarsBase">
+        <defName>FallenAngel_Horns</defName>
+        <label>Horns</label>
+        <description>These adorable little horns are the unmistakable trait of fallen angels. Don't mind the horns. Don't they look cute?</description>
+        <iconPath>UI/Gene_Icons/FallenAngelHorns</iconPath>
+        <displayCategory>Angel_genes</displayCategory>
+        <biostatMet>0</biostatMet>
+        <biostatCpx>0</biostatCpx>
+        <renderNodeProperties>
+        <li>
+            <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+            <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+            <texPath>Humanlike/BodyParts/Horns/FallenAngelHorns</texPath>
+            <color>(255, 255, 255)</color>
+            <parentTagDef>Head</parentTagDef>
+            <drawData>
+            <defaultData>
+                <layer>80</layer>
+            </defaultData>
+            <dataNorth>
+                <layer>10</layer>
+            </dataNorth>
+            </drawData>
+        </li>
+        </renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef  ParentName="GeneHairStyleBase">
+		<defName>FallenAngel_Hair</defName>
+		<label>Angel Hair</label>
+		<displayCategory>Angel_genes</displayCategory>
+		<description>byeah</description>
+		<iconPath>UI/Gene_Icons/FallenAngelHair</iconPath>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<hairTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>Fallen_angel</li>
+			</tags>
+		</hairTagFilter>
+	</GeneDef>
+
+
+    <GeneDef ParentName="GeneTailBase">
+        <defName>AngelTail_Smooth</defName>
+        <label>angelic tail</label>
+        <description>This forked tail is a natural trait of fallen angels. It swings back and forth when fallen angels are happy and excited... or preparing to feast on souls.</description>
+        <iconPath>UI/Gene_Icons/FallenAngelTail</iconPath>
+        <displayOrderInCategory>1023</displayOrderInCategory>
+        <capMods>
+        <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.05</offset>
+        </li>
+        </capMods>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayCategory>Angel_genes</displayCategory>
+        <renderNodeProperties>
+        <li>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPath>Humanlike/BodyParts/Tail/FallenAngelTail</texPath>
+            <overrideMeshSize>(1, 1)</overrideMeshSize>
+            <parentTagDef>Body</parentTagDef>
+            <rotDrawMode>Fresh, Rotting</rotDrawMode>
+            <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <defaultData>
+                <layer>-2</layer>
+            </defaultData>
+            <dataNorth>
+                <offset>(0, 0, -0.15)</offset>
+                <layer>90</layer>
+            </dataNorth>
+            <dataSouth>
+                <offset>(-0, 0, -0.15)</offset>
+            </dataSouth>
+            <dataEast>
+                <offset>(-0.5, 0, -0.15)</offset>
+            </dataEast>
+            <dataWest>
+                <offset>(0.5, 0, -0.15)</offset>
+            </dataWest>
+            </drawData>
+        </li>
+        </renderNodeProperties>
+    </GeneDef>
+
+</Defs>

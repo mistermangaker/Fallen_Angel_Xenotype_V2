@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+     <StatDef>
+    <defName>FA_AffectionGainFactor</defName>
+    <label>hemogen gain multiplier</label>
+    <description>A multiplier on the amount of hemogen gained.</description>
+    <category>BasicsPawn</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <hideAtValue>1</hideAtValue>
+  </StatDef>
+
+</Defs>

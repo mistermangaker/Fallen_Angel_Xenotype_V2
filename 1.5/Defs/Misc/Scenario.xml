@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenarioDef>
+    <defName>FA_FallenAngelSanguophage</defName>
+    <label>The Angel Cult</label>
+    <description>Throughout the land there exist creatures that mimic angels in their appearance. These creatures are extremely charismatic and powerful. They form small cults surrounding themseleves. This is the story of one of those cults going out into the wilderness in search of a new home.</description>
+    <scenario>
+      <summary>start with 1 angel and 5 colonists and starting supplies</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+                <factionDef>PlayerColony</factionDef>
+
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          
+          <customSummary>start with 1 angel and 5 colonists and starting supplies</customSummary>
+          <overrideKinds>
+            <li>
+              <xenotype>FA_fallenangel</xenotype>
+              <pawnKind>FallenAngel_colonist</pawnKind>
+            </li>
+            
+          </overrideKinds>
+          <xenotypeCounts>
+            <li>
+              <xenotype>FA_fallenangel</xenotype>
+              <count>1</count>
+              <description>non-babyfallen angel</description>
+              <requiredAtStart>true</requiredAtStart>
+              <allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>
+            </li>
+            <li>
+              <xenotype>Baseliner</xenotype>
+              <count>5</count>
+            </li>
+          </xenotypeCounts>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Throughout the land there exist creatures that mimic angels in their appearance. These creatures are extremely charismatic and powerful. They form small cults surrounding themseleves. This is the story of one of those cults going out into the wilderness in search of a new home.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>2000</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>100</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>HemogenPack</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>200</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>200</count>
+        </li>
+        
+        <!-- Starting research -->
+
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+
+  
+</Defs>

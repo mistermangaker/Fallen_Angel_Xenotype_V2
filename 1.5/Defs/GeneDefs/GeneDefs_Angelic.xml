@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+
+  <GeneDef>
+    <defName>FA_Gene_Affection</defName>
+    <label>vita psycaster</label>
+    <description>carriers of this gene are capable of special psychic abilities, powered the their mental fortitude and love for their friends </description>
+    <displayCategory>Violence</displayCategory>
+    <displayOrderInCategory>60</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Killthirst</iconPath>
+    <resourceDescription>how much mental energy this pawn has to give affection</resourceDescription>
+    <biostatMet>4</biostatMet>
+    <minAgeActive>13</minAgeActive>
+    <geneClass>FallenAngel.Gene_Affection</geneClass>
+    <resourceGizmoType>FallenAngel.GeneGizmo_ResourceAffection</resourceGizmoType>
+    <resourceLabel>psy-vita</resourceLabel>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <showGizmoOnWorldView>true</showGizmoOnWorldView>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+     <resourceLossPerDay>0.02</resourceLossPerDay>
+  </GeneDef>
+
+
+
+  <GeneDef>
+    <defName>FA_Gene_Affection_smooch</defName>
+    <label>vita feeder</label>
+    <description>Carriers of this gene are capable of absorbing mental energy directly through a kiss on the cheek</description>
+    <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+    <geneClass>Gene_Bloodfeeder</geneClass>
+    <prerequisite>FA_Gene_Affection</prerequisite>
+    <displayCategory>Hemogen</displayCategory>
+    <abilities>
+      <li>FA_Smooch</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>FA_Smooch</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <minAgeActive>13</minAgeActive>
+  </GeneDef>
+
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>AngelVoice</defName>
+    <label>angelic voice</label>
+    <description>Carriers have an extremely pleasant sounding voice. As a result they become </description>
+    <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
+    <displayOrderInCategory>126</displayOrderInCategory>
+    <statOffsets>
+      <TameAnimalChance>0.5</TameAnimalChance>
+      <NegotiationAbility>0.5</NegotiationAbility>
+      <TradePriceImprovement>0.7</TradePriceImprovement>
+      <SocialImpact>2</SocialImpact>
+    </statOffsets>
+    <soundCall>Angel_Call</soundCall>
+    <soundDeath>Angel_death</soundDeath>
+    <soundWounded>Angel_hurt</soundWounded>
+
+  </GeneDef>
+
+
+</Defs>

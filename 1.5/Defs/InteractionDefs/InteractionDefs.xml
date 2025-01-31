@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <InteractionDef>
+    <defName>FA_TalkedAt</defName>
+    <label>one sided conversation</label>
+    <workerClass>InteractionWorker_Chitchat</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>FA_OneSidedConversationRecipient</recipientThought>
+    <initiatorThought>FA_OneSidedConversationInitiator</initiatorThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [speakingtone] [RECIPIENT_nameDef] about [conversationsubject].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [speakingtone] [RECIPIENT_nameDef] about [conversationsubject] [endingaddition].</li>
+        
+        <li>speakingtone->yapped to</li>
+        <li>speakingtone->whined to</li>
+        <li>speakingtone->had a onesided conversation with</li>
+
+        <li>conversationsubject->how bored they are</li>
+        <li>conversationsubject->their favorite animals</li>
+        <li>conversationsubject->fantasy stories</li>
+        <li>conversationsubject->yaoi</li>
+        <li>conversationsubject->fighting evil wizards</li>
+        <li>conversationsubject->their secret bizarre kinks</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->their favorite cube shaped objects</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->cubes</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->what it would be like to be a cube</li>
+
+        <li>endingaddition->without [RECIPIENT_nameDef] being able to get a word in edgewise</li>
+        <li>endingaddition->despite [RECIPIENT_nameDef] asking them repeatedly to stop</li>
+        <li>endingaddition(INITIATOR_cubeInterest==true,RECIPIENT_cubeInterest==false)->.[INITIATOR_nameDef] is starting to hate cubes in general now.</li>
+      </rulesStrings>
+      
+    </logRulesInitiator>
+  </InteractionDef>
+</Defs>

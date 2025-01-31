@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+<FA_Title>Fallen Angel Mod Settings</FA_Title>
+    <FA_Placeworker_OnGroundOnlyCantPlaceOnWall>Can't be built here can't be built over wall</FA_Placeworker_OnGroundOnlyCantPlaceOnWall>
+    <FA_Placeworker_OnGroundOnlyTooCloseToMapEdge>Too close to map edge.</FA_Placeworker_OnGroundOnlyTooCloseToMapEdge>
+
+    <FA_PlaceWorker_OnWall>Can't be placed here. Needs to be placed on a wall or impassable surface</FA_PlaceWorker_OnWall>
+
+    
+    <FA_LetterObssessiveBondFormed>{0} has suffered with an extreme lack of affction and attantion from other colonists. as a result {0} has developed and psychic obsession with another colonist and has linked with them. {0} is refusing to break the bond no matter what</FA_LetterObssessiveBondFormed>
+  
+
+    <!--smooch popups-->
+    <FA_Warning>WARNING:</FA_Warning>
+    <FA_WarningPawnWillBeEmbarrassedToKissRecipientMessage>{WARNING} {INITIATOR_nameDef} has a low opinion of {RECIPIENT_nameDef} and will be embarassed to kiss them. Forcing them to do so will make them unhappy</FA_WarningPawnWillBeEmbarrassedToKissRecipientMessage>
+    <FA_WarningDangerousToKissWarningMessage> {WARNING} {ABILITY_label} is dangerous to use on {RECIPIENT} using {ABILITY_label} may result in  </FA_WarningDangerousToKissWarningMessage>
+    
+    <!--smooch hover tooltips-->
+    <FA_DangerousToKissPerson>{WARNING} {ABILITY_label} is dangerous to use on {RECIPIENT_nameDef} </FA_DangerousToKissPerson>
+    <FA_OkayWithKissingThisPerson>{RECIPIENT_nameDef} is okay with kissing {RECIPIENT_nameDef} expected affection gain is: </FA_OkayWithKissingThisPerson>
+    <FA_EmbarrassedWithKissingThisPerson>{RECIPIENT_nameDef} is not okay with kissing {RECIPIENT_nameDef} however expected affection gain is: </FA_EmbarrassedWithKissingThisPerson>
+
+    
+
+     <!-- affection gene-->
+    <AlertLowAffection>low psy-vita</AlertLowAffection>
+    <AlertLowAffectionDesc>A colonist has low psy-vita. At zero psy-vita, they will develop a painful psy-vita craving. Colonists with psy-vita cravings may act out, or develop bizzare behaviors \n\nThe following colonists have low hemogen</AlertLowAffectionDesc>
+
+    <!--affection gizmo-->
+    <ConsumeAffectionBelow>Consume psy-vita below</ConsumeAffectionBelow>
+    <NeverConsumeAffection>Never consume psy-vita.</NeverConsumeAffection>
+
+    <!--affection feeding buttons-->
+    <FA_GetAffectiionFromColonists>This determines whether {PAWN_nameDef} will automatically feed off of colonists when {PAWN_possessive} psy-vita is below {MIN}.\n\nAutomatic feeding on colonists is currently {ONOFF}.</FA_GetAffectiionFromColonists>
+    <FA_GetAffectiionFromPrisioners>This determines whether {PAWN_nameDef} will automatically feed off of prisoners when {PAWN_possessive} psy-vita is below {MIN}.\n\nAutomatic feeding on prisoners is currently {ONOFF}.</FA_GetAffectiionFromPrisioners>
+    <FA_GetAffectiionFromSlaves>This determines whether {PAWN_nameDef} will automatically feed off of slaves when {PAWN_possessive} psy-vita is below {MIN}.\n\nAutomatic feeding on slaves is currently {ONOFF}.</FA_GetAffectiionFromSlaves>
+
+
+
+
+</LanguageData>

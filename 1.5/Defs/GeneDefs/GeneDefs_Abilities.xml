@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <GeneDef>
+    <defName>angelLongjumpLegs</defName>
+    <label>Angelic flight</label>
+    <description>An angel's wings are one of their core defining traits and allow them to soar above the earth. However, these wings are underdeveloped and can't carry an angel very far yet.</description>
+    <iconPath>UI/Gene_Icons/FallenAngelLongJump</iconPath>
+    <displayCategory>Angel_genes</displayCategory>
+    <abilities>
+      <li>angelLongjump</li>
+    </abilities>
+    <biostatMet>-2</biostatMet>
+     <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Humanlike/BodyParts/Wings/FallenAngelWings</texPath>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0.4, -0.20)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.4, -0.05)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.10, -0.4, -0.05)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.10, -0.4, -0.05)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
+</Defs>

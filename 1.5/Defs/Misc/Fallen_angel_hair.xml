@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+ <StyleItemCategoryDef>
+    <defName>Fallen_angel</defName>
+    <label>angel</label>
+  </StyleItemCategoryDef>
+
+
+	<HairDef>
+		<defName>FallenAngel_HairOne</defName>
+		<label>danger</label>
+		<styleGender>Any</styleGender>
+		<texPath>Humanlike/Hair/ShamiaHair</texPath>
+		<category>Fallen_angel</category>
+		<styleTags>
+			<li>Shaved</li>
+			<li>Urban</li>
+			<li>Punk</li>
+			<li>Rural</li>
+			<li>Tribal</li>
+			<li>Soldier</li>
+			<li>Fallen_angel</li>
+		</styleTags>
+		<requiredGene>FallenAngel_Hair</requiredGene>
+	</HairDef>
+</Defs>
