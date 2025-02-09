@@ -91,4 +91,68 @@
         </renderNodeProperties>
     </GeneDef>
 
+
+
+
+
+      <GeneDef>
+    <defName>synthetic</defName>
+    <label>furskin</label>
+    <labelShortAdj>furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Furskin_Average1</li>
+      <li>Furskin_Average2</li>
+      <li>Furskin_Average3</li>
+      <li>Furskin_Narrow1</li>
+      <li>Furskin_Narrow2</li>
+      <li>Furskin_Narrow3</li>
+      <li>Furskin_Heavy1</li>
+      <li>Furskin_Heavy2</li>
+      <li>Furskin_Heavy3</li>
+      <li>Furskin_Gaunt</li>
+    </forcedHeadTypes>
+    
+    <statOffsets>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+    </statOffsets>
+    
+    <fur>synthetic</fur>
+    <skinIsHairColor>false</skinIsHairColor>
+    <tattoosVisible>true</tattoosVisible>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>PawnRenderNode_Fur</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+        <parentTagDef>Body</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
+  <FurDef>
+    <defName>synthetic</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Bodies/FurCovered_Male</Male>
+      <Female>Things/Pawn/Humanlike/Bodies/FurCovered_Female</Female>
+      <Hulk>Things/Pawn/Humanlike/Bodies/FurCovered_Hulk</Hulk>
+      <Fat>Things/Pawn/Humanlike/Bodies/FurCovered_Fat</Fat>
+      <Thin>Things/Pawn/Humanlike/Bodies/FurCovered_Thin</Thin>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+
+
 </Defs>

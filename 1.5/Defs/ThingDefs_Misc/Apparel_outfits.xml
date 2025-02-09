@@ -140,6 +140,9 @@
     	<CleaningSpeed>5</CleaningSpeed>
     </equippedStatOffsets>
     <apparel>
+    <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
     <bodyPartGroups>
         <li>FullHead</li>
     </bodyPartGroups>

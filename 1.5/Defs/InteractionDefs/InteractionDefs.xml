@@ -3,7 +3,7 @@
    <InteractionDef>
     <defName>FA_TalkedAt</defName>
     <label>one sided conversation</label>
-    <workerClass>InteractionWorker_Chitchat</workerClass>
+    <workerClass>FallenAngel.InteractionWorker_Chitchat</workerClass>
     <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
     <initiatorXpGainSkill>Social</initiatorXpGainSkill>
     <initiatorXpGainAmount>4</initiatorXpGainAmount>
@@ -35,4 +35,82 @@
       
     </logRulesInitiator>
   </InteractionDef>
+
+    <InteractionDef>
+        <defName>FA_SocialBoost_Interacion</defName>
+        <label>psychic social boost</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+        <logRulesInitiator>
+        <rulesStrings>
+            <li>r_logentry->[INITIATOR_nameDef] gave tips to improve [RECIPIENT_nameDef]'s social ability.</li>
+        </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+
+        <InteractionDef>
+        <defName>FA_FertilityBoost_Interacion</defName>
+        <label>psychic fertility boost</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+        <logRulesInitiator>
+        <rulesStrings>
+            <li>r_logentry->[INITIATOR_nameDef] gave tips to improve [RECIPIENT_nameDef] encouraging [RECIPIENT_possessive] immune system to improve.</li>
+            <li>r_logentry(INITIATOR_gender==female,RECIPIENT_gender==female)->[INITIATOR_nameDef] gave some girl to girl tips to [RECIPIENT_nameDef] on fertility.</li>
+        </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+
+    <InteractionDef>
+        <defName>FA_PyschicImmunityGain_Interacion</defName>
+        <label>psychic immunity boost</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+        <logRulesInitiator>
+        <rulesStrings>
+            <li>r_logentry->[INITIATOR_nameDef] psychically manipulated [RECIPIENT_nameDef] encouraging [RECIPIENT_possessive] immune system to improve.</li>
+        </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+
+   <!--<InteractionDef>
+    <defName>FA_AffectionChitChat</defName>
+    <label>chitchat</label>
+    <workerClass>FallenAngel.InteractionWorker_AffectionChitChat</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>Chitchat</recipientThought>
+    <initiatorThought>Chitchat</initiatorThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [speakingtone] [RECIPIENT_nameDef] about [conversationsubject].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [speakingtone] [RECIPIENT_nameDef] about [conversationsubject] [endingaddition].</li>
+        
+        <li>speakingtone->yapped to</li>
+        <li>speakingtone->whined to</li>
+        <li>speakingtone->had a onesided conversation with</li>
+
+        <li>conversationsubject->how bored they are</li>
+        <li>conversationsubject->their favorite animals</li>
+        <li>conversationsubject->fantasy stories</li>
+        <li>conversationsubject->yaoi</li>
+        <li>conversationsubject->fighting evil wizards</li>
+        <li>conversationsubject->their secret bizarre kinks</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->their favorite cube shaped objects</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->cubes</li>
+        <li>conversationsubject(INITIATOR_cubeInterest==true)->what it would be like to be a cube</li>
+
+        <li>endingaddition->without [RECIPIENT_nameDef] being able to get a word in edgewise</li>
+        <li>endingaddition->despite [RECIPIENT_nameDef] asking them repeatedly to stop</li>
+        <li>endingaddition(INITIATOR_cubeInterest==true,RECIPIENT_cubeInterest==false)->.[INITIATOR_nameDef] is starting to hate cubes in general now.</li>
+      </rulesStrings>
+      
+    </logRulesInitiator>
+  </InteractionDef>-->
+
+
 </Defs>

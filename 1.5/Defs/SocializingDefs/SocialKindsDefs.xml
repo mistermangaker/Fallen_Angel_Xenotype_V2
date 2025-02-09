@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Platonic</defName>
+        <label>platonic</label>
+   </FallenAngel.SocialKindDef>
+
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Meditative</defName>
+        <label>meditative</label>
+   </FallenAngel.SocialKindDef>
+
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Romantic</defName>
+        <label>romantic</label>
+   </FallenAngel.SocialKindDef>
+
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Sexual</defName>
+        <label>sexual</label>
+        <requiredRelationshipDefs>
+        <li>Spouse</li>
+        <li>Fiance</li>
+        <li>Lover</li>
+        </requiredRelationshipDefs>
+   </FallenAngel.SocialKindDef>
+
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Familial</defName>
+        <label>family</label>
+        <requiredRelationshipDefs>
+        <li>Spouse</li>
+        <li>Fiance</li>
+        <li>Stepparent</li>
+        <li>Stepchild</li>
+        <li>ParentInLaw</li>
+        <li>ChildInLaw</li>
+        <li>Parent</li>
+        <li>Child</li>
+        <li>Sibling</li>
+        <li>HalfSibling</li>
+        <li>Grandparent</li>
+        <li>Grandchild</li>
+        <li>NephewOrNiece</li>
+        <li>UncleOrAunt</li>
+        <li>Cousin</li>
+        </requiredRelationshipDefs>
+   </FallenAngel.SocialKindDef>
+
+   <FallenAngel.SocialKindDef>
+        <defName>FA_Pyschic</defName>
+        <label>pychic</label>
+   </FallenAngel.SocialKindDef>
+
+</Defs>

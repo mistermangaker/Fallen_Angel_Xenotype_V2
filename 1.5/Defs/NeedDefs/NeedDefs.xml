@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   
+
+  <NeedDef>
+    <defName>FA_SocialNeed</defName>
+    <needClass>FallenAngel.Need_Social</needClass>
+    <label>social</label>
+    <description>placeholder</description>
+    <minIntelligence>Humanlike</minIntelligence>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+	  <baseLevel>1</baseLevel>
+    <listPriority>90</listPriority>
+	  <developmentalStageFilter>Adult</developmentalStageFilter>
+	  <onlyIfCausedByGene>true</onlyIfCausedByGene>
+  </NeedDef>
+
+
+  <!--<NeedDef>
+    <defName>FA_Explosions</defName>
+    <needClass>FallenAngel.Need_Social</needClass>
+    <label>explosions</label>
+    <description>placeholder</description>
+    <minIntelligence>Humanlike</minIntelligence>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+	  <baseLevel>1</baseLevel>
+    <listPriority>90</listPriority>
+	  <developmentalStageFilter>Adult</developmentalStageFilter>
+	  <onlyIfCausedByGene>true</onlyIfCausedByGene>
+  </NeedDef>-->
+
+
+</Defs>

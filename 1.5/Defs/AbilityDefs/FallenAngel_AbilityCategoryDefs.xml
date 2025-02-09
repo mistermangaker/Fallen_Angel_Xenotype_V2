@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityCategoryDef>
+        <defName>FA_FallenAngel</defName>
+        <displayOrder>1000</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>FallenAngel_Ability</defName>
+        <displayOrder>4</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>FallenAngel_Ability_Social</defName>
+        <displayOrder>5</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>FallenAngel_Ability_Combat</defName>
+        <displayOrder>6</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>FallenAngel_Ability_Obsessive</defName>
+        <displayOrder>7</displayOrder>
+    </AbilityCategoryDef>
+  
+</Defs>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingStyleDef>
+    <defName>FA_Angelic_PowerArmor</defName>
+    <useWornGraphicMask>true</useWornGraphicMask>
+    <wornGraphicPath>Things/Pawn/Humanlike/ApparelStyles/Angelic_PowerArmor/PowerArmor</wornGraphicPath>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/ApparelStyles/Angelic_PowerArmor/PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingStyleDef>
+
+
+
+
+  <ThingStyleDef>
+    <defName>FA_Angelic_LongSwordA</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/EquipmentStyleItems/WeaponMelee/Angelic/FA_LongSwordA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+
+    <ThingStyleDef>
+    <defName>FA_Angelic_LongSwordB</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/EquipmentStyleItems/WeaponMelee/Angelic/FA_LongSwordB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+
+    <ThingStyleDef>
+    <defName>FA_Angelic_GladiusA</defName>
+    <graphicData>
+      <texPath>Things/Item/Equipment/EquipmentStyleItems/WeaponMelee/Angelic/FA_GladiusA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>FA_Angelic_ReconArmor</defName>
+        <useWornGraphicMask>true</useWornGraphicMask>
+        <wornGraphicPath>Things/Pawn/Humanlike/ApparelStyles/Angelic_PowerArmor/PowerArmor</wornGraphicPath>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/ApparelStyles/Angelic_PowerArmor/PowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+    </ThingStyleDef>
+   
+  <StyleCategoryDef>
+    <defName>FA_Angelic</defName>
+    <label>angelic</label>
+    <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
+    <!--<soundOngoingRitual>RitualSustainer_Hindu</soundOngoingRitual>
+    <ritualVisualEffectDef>Hindu</ritualVisualEffectDef>-->
+    <thingDefStyles>
+
+      <li>
+        <thingDef>Apparel_PowerArmor</thingDef>
+        <styleDef>FA_Angelic_PowerArmor</styleDef>
+      </li>
+      <li>
+        <thingDef>MeleeWeapon_LongSword</thingDef>
+        <styleDef>FA_Angelic_LongSwordA</styleDef>
+      </li>
+      <li>
+        <thingDef>MeleeWeapon_LongSword</thingDef>
+        <styleDef>FA_Angelic_LongSwordB</styleDef>
+      </li>
+      <li>
+        <thingDef>MeleeWeapon_Gladius</thingDef>
+        <styleDef>FA_Angelic_GladiusA</styleDef>
+      </li>
+    </thingDefStyles>
+  </StyleCategoryDef>
+
+</Defs>

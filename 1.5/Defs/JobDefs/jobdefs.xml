@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+
+
+
+
+
+
+
+  <JobDef>
+    <defName>FA_SocializeGather</defName>
+    <driverClass>FallenAngel.JobDriver_SocializeGathering</driverClass>
+    <reportString>relaxing socially.</reportString>
+    <joyXpPerTick>0.003</joyXpPerTick>
+    <joyDuration>4000</joyDuration>
+  </JobDef>
+
      <JobDef>
     <defName>FA_TalkAtTarget</defName>
     <driverClass>FallenAngel.JobDriver_TargetedInteractionSpree</driverClass>

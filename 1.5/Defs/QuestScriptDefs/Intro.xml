@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<QuestScriptDef>
+    <defName>Intro_FallenAngel</defName>
+    <rootMinPoints>0</rootMinPoints>
+    <expireDaysRange>4~8</expireDaysRange>
+    <defaultChallengeRating>1</defaultChallengeRating>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->The Deserter</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->Get in here nerd</li>
+
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_GetMap" />
+        <li Class="QuestNode_GetWalkInSpot" />
+
+
+        
+        <!-- Get asker -->
+        <li Class="QuestNode_GeneratePawn">
+          <kindDef>FallenAngel_colonist</kindDef>
+          
+          <faction>FA_FallenAngelFaction</faction>
+          <storeAs>asker</storeAs>
+        </li>
+        
+        <!-- Empire becomes hostile -->
+
+        
+        <!-- Spawn joiner -->
+        <li Class="QuestNode_PawnsArrive">
+          <pawns>$asker</pawns>
+          <walkInSpot>$walkInSpot</walkInSpot>
+          <joinPlayer>true</joinPlayer>
+          
+          <isSingleReward>true</isSingleReward>
+          <rewardDetailsHidden>true</rewardDetailsHidden>
+        </li>
+        <li Class="QuestNode_SendSignals">
+                <outSignals>JoinerArrived</outSignals>
+              </li>
+       
+        <li Class="QuestNode_AllSignals">
+          <inSignals>
+            
+            <li>JoinerArrived</li>
+          </inSignals>
+          <node Class="QuestNode_End" />
+        </li>
+        </nodes>
+    </root>
+    
+  </QuestScriptDef>
+
+</Defs>

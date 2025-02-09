@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  
+<!--distance stats-->
+  <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>FA_CastExplosionDistance</defName>
+    <label>explosion casting distance</label>
+    <description>How far away a fallen angel can cast this ability.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+
+<!--duration stats-->
+  <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>NeuroOverloaderDurarationMultiplier</defName>
+    <label>neuro overloader duration</label>
+    <description>multiplier on how long this ability will last</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+  <StatDef ParentName="FallenAngelStatBase">
+    <defName>NeuroOverloaderCastingDistance</defName>
+    <label>neuro overloader casting distance</label>
+    <description>How far away a fallen angel can cast this ability.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnAnimals>false</showOnAnimals>
+    <minValue>1</minValue>
+    <displayPriorityInCategory>3500</displayPriorityInCategory>
+    <cacheable>true</cacheable>
+  </StatDef>
+
+   <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>FA_PsychicImmunityGainMultiplier</defName>
+    <label>psychic immunity gain multiplier</label>
+    <description>multiplier on how long this ability will last</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+
+
+   <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>FA_PsychicJoyFuzzDurationMultiplier</defName>
+    <label>psychic bliss duration multiplier</label>
+    <description>multiplier on how long this ability will last</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+   <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>FA_PsychicFertilityBoostDurationMultiplier</defName>
+    <label>psychic fertility duration multiplier</label>
+    <description>multiplier on how long this ability will last</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+   <StatDef ParentName="FallenAngelStatBase"> 
+    <defName>FA_PsychicSocialBoostDuractionMultiplier</defName>
+    <label>psychic social boost duration multiplier</label>
+    <description>multiplier on how long this ability will last</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+
+
+
+
+</Defs>

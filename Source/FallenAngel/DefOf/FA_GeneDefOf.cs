@@ -18,6 +18,7 @@ namespace FallenAngel
 
         public static GeneDef FA_Gene_Affection;
         public static GeneDef Gene_ObsessiveBonding;
+        public static GeneDef Gene_Loving;
 
 
     }

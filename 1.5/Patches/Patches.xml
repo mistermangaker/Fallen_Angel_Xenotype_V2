@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/InteractionDef[defName="Chitchat"]/workerClass</xpath>
+    <value>
+      <workerClass>FallenAngel.InteractionWorker_Chitchat</workerClass>
+    </value>
+  </Operation>
+    <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/InteractionDef[defName="DeepTalk"]/workerClass</xpath>
+    <value>
+      <workerClass>FallenAngel.InteractionWorker_DeepTalk</workerClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/InteractionDef[defName="KindWords"]/workerClass</xpath>
+    <value>
+      <workerClass>FallenAngel.InteractionWorker_KindWords</workerClass>
+    </value>
+  </Operation>
+
+</Patch>

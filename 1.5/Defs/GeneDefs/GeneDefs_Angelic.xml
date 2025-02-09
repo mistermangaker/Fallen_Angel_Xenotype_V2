@@ -51,9 +51,10 @@
   <GeneDef ParentName="GeneVoiceBase">
     <defName>AngelVoice</defName>
     <label>angelic voice</label>
-    <description>Carriers have an extremely pleasant sounding voice. As a result they become </description>
+    <description>Carriers have an extremely pleasant sounding voice.</description>
     <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
     <displayOrderInCategory>126</displayOrderInCategory>
+    <prerequisite>FA_Gene_Affection</prerequisite>
     <statOffsets>
       <TameAnimalChance>0.5</TameAnimalChance>
       <NegotiationAbility>0.5</NegotiationAbility>
@@ -63,7 +64,102 @@
     <soundCall>Angel_Call</soundCall>
     <soundDeath>Angel_death</soundDeath>
     <soundWounded>Angel_hurt</soundWounded>
+  </GeneDef>
 
+
+<GeneDef>
+        <defName>Gene_ObsessiveBonding</defName>
+        <label>deleriophagey</label>
+        <description>Carriers of this gene have the capability to develop a parasitic psychic bond with another person and use them as a sort battery for thier pyschic powers. using powers associated with this gene can cause sickness, injury, or death to the bonded pawn</description>
+        <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+        <geneClass>FallenAngel.Gene_ObsessiveBonding</geneClass>
+        <exclusionTags>
+            <li>obsession</li>
+        </exclusionTags>
+        <prerequisite>FA_Gene_Affection</prerequisite>
+        <displayCategory>Hemogen</displayCategory>
+        <resourceLossPerDay>0.02</resourceLossPerDay>
+        <biostatMet>2</biostatMet>
+        <minAgeActive>13</minAgeActive>
+        <statOffsets>
+          <FA_AffectionGainFactor>0.1</FA_AffectionGainFactor>
+        </statOffsets>
+    </GeneDef>
+
+<GeneDef>
+        <defName>Gene_Loving</defName>
+        <label>luxuriaphagey</label>
+        <description>Carriers of this gene are inately stronger socialites. they are capable of casting extremely strong social psycasts at the cost of having a physical need to socialize regularly</description>
+        <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+        <exclusionTags>
+            <li>obsession</li>
+        </exclusionTags>
+        <prerequisite>FA_Gene_Affection</prerequisite>
+        <displayCategory>Hemogen</displayCategory>
+        <resourceLossPerDay>0.02</resourceLossPerDay>
+        <biostatMet>4</biostatMet>
+        <minAgeActive>13</minAgeActive>
+        <statOffsets>
+            <TameAnimalChance>0.5</TameAnimalChance>
+            <NegotiationAbility>0.5</NegotiationAbility>
+            <TradePriceImprovement>0.7</TradePriceImprovement>
+            <FA_AffectionGainFactor>-0.1</FA_AffectionGainFactor>
+            <SocialImpact>2</SocialImpact>
+        </statOffsets>
+        <causesNeed>FA_SocialNeed</causesNeed>
+    </GeneDef>
+
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>FA_EnhancedCombatSenses</defName>
+    <label>enhanced combat senses</label>
+    <description>the prerequisite gene for various combat related specialist genes and upgrades </description>
+    <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
+    <displayOrderInCategory>126</displayOrderInCategory>
+    <prerequisite>FA_Gene_Affection</prerequisite>
+    <statOffsets>
+      <FA_AffectionGainFactor>-0.1</FA_AffectionGainFactor>
+    </statOffsets>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>FA_Pyrophagey</defName>
+    <label>pyrophagey</label>
+    <description>placeholder</description>
+    <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
+    <displayOrderInCategory>126</displayOrderInCategory>
+    <prerequisite>FA_EnhancedCombatSenses</prerequisite>
+    <exclusionTags>
+      <li>FA_CombatGenesSpecialistGenes</li>
+    </exclusionTags>
+    <statOffsets>
+      <FA_AffectionGainFactor>-0.1</FA_AffectionGainFactor>
+    </statOffsets>
+    <forcedTraits>
+      <li>
+        <def>Pyromaniac</def>
+      </li>
+    </forcedTraits>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>FA_Cyrophagey</defName>
+    <label>cyrophagey</label>
+    <description>placeholder</description>
+    <iconPath>UI/Gene_Icons/FallenAngelAngelicVoice</iconPath>
+    <displayOrderInCategory>126</displayOrderInCategory>
+    <prerequisite>FA_EnhancedCombatSenses</prerequisite>
+    <exclusionTags>
+      <li>FA_CombatGenesSpecialistGenes</li>
+    </exclusionTags>
+    <statOffsets>
+      <FA_AffectionGainFactor>-0.1</FA_AffectionGainFactor>
+    </statOffsets>
+    <forcedTraits>
+      <li>
+        <def>Pyromaniac</def>
+      </li>
+    </forcedTraits>
   </GeneDef>
 
 

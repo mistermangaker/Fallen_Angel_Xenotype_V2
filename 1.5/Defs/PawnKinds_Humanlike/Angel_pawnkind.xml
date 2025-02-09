@@ -11,7 +11,7 @@
     <humanPregnancyChance>0</humanPregnancyChance>
     <xenotypeSet Inherit="False">
         <xenotypeChances>
-            <FA_fallenangel MayRequire="Ludeon.RimWorld.Biotech">999</FA_fallenangel>
+            <FA_fallenangel_basic MayRequire="Ludeon.RimWorld.Biotech">999</FA_fallenangel_basic>
         </xenotypeChances>
     </xenotypeSet>
     
@@ -35,6 +35,27 @@
     <initialResistanceRange>13~21</initialResistanceRange>
   </PawnKindDef>
 
+
+ <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>FallenAngel_colonist_tester</defName>
+    <label>colonist</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <nameMaker>NamerFallenAngel</nameMaker>
+    <fixedGender>Female</fixedGender>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <xenotypeSet Inherit="False">
+        <xenotypeChances>
+            <FA_fallenangel_basic MayRequire="Ludeon.RimWorld.Biotech">999</FA_fallenangel_basic>
+        </xenotypeChances>
+    </xenotypeSet>
+    <apparelTags>
+      <li>FallenAngel_Outfit</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
 
   <PawnKindDef>
     <defName>sweetheart</defName>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <!--ideas 
+   immunity gain speed
+   give the pawn happiness
+   make the pawn more socialable
+   make the pawn more fertilie
+   calm a mental break
+   -->
+  <AbilityDef Name="FA_SocialPsycast" ParentName="FA_PsycastTouchBase" Abstract="True">
+    <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc3</hotKey>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <cooldownTicksRange>700~100</cooldownTicksRange>
+    <statBases>
+      <Ability_Duration>500</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+      <warmupTime>0.25</warmupTime>
+      <range>2.9</range>
+      <targetParams>
+        <canTargetAnimals>False</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+    <li Class = "FallenAngel.CompProperties_HasCorrectGene">
+        <requiredGene>Gene_Loving</requiredGene>
+    </li>
+    <li Class = "FallenAngel.CompProperties_AbilityAffectionCost">
+        <affectionCost>0.2</affectionCost>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+    <AbilityDef ParentName="FA_SocialPsycast">
+        <defName>FA_ImmunityGain_Ability</defName>
+        <label>immunity gain</label>
+        <description>placeholder</description>
+        <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>FA_PyschicImmunityGain_Interacion</interactionDef>
+                <canApplyToMentallyBroken>false</canApplyToMentallyBroken>
+                <canApplyToAsleep>true</canApplyToAsleep>
+                <canApplyToUnconscious>true</canApplyToUnconscious>
+            </li>
+            <li Class = "FallenAngel.CompProperties_OffsetSocialNeed">
+                <offsetAmountForInitator>0.1</offsetAmountForInitator>
+                <offsetAmountForReciever>0.3</offsetAmountForReciever>
+            </li>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>FA_ImmunityGain_Hediif</hediffDef>
+                <durationMultiplier>FA_PsychicImmunityGainMultiplier</durationMultiplier>
+                <psychic>False</psychic>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <AbilityDef ParentName="FA_SocialPsycast">
+        <defName>FA_JoyFuzz_Ability</defName>
+        <label>pychic bliss</label>
+        <description>placeholder</description>
+        <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>FA_JoyFuzz_Hediff</hediffDef>
+                <durationMultiplier>FA_PsychicJoyFuzzDurationMultiplier</durationMultiplier>
+                <psychic>False</psychic>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+            <li Class = "FallenAngel.CompProperties_OffsetSocialNeed">
+                <offsetAmountForInitator>0.3</offsetAmountForInitator>
+                <offsetAmountForReciever>0.3</offsetAmountForReciever>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="FA_SocialPsycast">
+        <defName>FA_FertilityBoost_Ability</defName>
+        <label>pychic bliss</label>
+        <description>placeholder</description>
+        <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+        <comps>
+        <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>FA_FertilityBoost_Interacion</interactionDef>
+                <canApplyToMentallyBroken>false</canApplyToMentallyBroken>
+                <canApplyToAsleep>false</canApplyToAsleep>
+                <canApplyToUnconscious>false</canApplyToUnconscious>
+            </li>
+            <li Class = "FallenAngel.CompProperties_OffsetSocialNeed">
+                <offsetAmountForInitator>0.5</offsetAmountForInitator>
+                <offsetAmountForReciever>0.5</offsetAmountForReciever>
+            </li>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>FA_FertilityBoost_Hediif</hediffDef>
+                <durationMultiplier>FA_PsychicFertilityBoostDurationMultiplier</durationMultiplier>
+                <psychic>False</psychic>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+  <AbilityDef ParentName="FA_SocialPsycast">
+        <defName>FA_SocialBoost_Ability</defName>
+        <label>pychic social boost</label>
+        <description>placeholder</description>
+        <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+        <comps>
+        <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>FA_SocialBoost_Interacion</interactionDef>
+                <canApplyToMentallyBroken>false</canApplyToMentallyBroken>
+                <canApplyToAsleep>false</canApplyToAsleep>
+                <canApplyToUnconscious>false</canApplyToUnconscious>
+            </li>
+        <li Class = "FallenAngel.CompProperties_OffsetSocialNeed">
+                <offsetAmountForInitator>0.7</offsetAmountForInitator>
+                <offsetAmountForReciever>0.7</offsetAmountForReciever>
+            </li>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>FA_SocialBoost_Hediff</hediffDef>
+                <durationMultiplier>FA_PsychicSocialBoostDuractionMultiplier</durationMultiplier>
+                <psychic>False</psychic>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+  <AbilityDef Name="FA_CombatPsycast" ParentName="FA_PsycastBase" Abstract="True">
+    <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc3</hotKey>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <cooldownTicksRange>700~100</cooldownTicksRange>
+    <statBases>
+      <Ability_Duration>3</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+      <warmupTime>0.25</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetAnimals>False</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+    <li Class = "FallenAngel.CompProperties_HasCorrectGene">
+        <requiredGene>FA_EnhancedCombatSenses</requiredGene>
+    </li>
+    <li Class = "FallenAngel.CompProperties_AbilityAffectionCost">
+        <affectionCost>0.3</affectionCost>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef ParentName="FA_PsycastBase">
+    <defName>FA_NeuroOverLoader_Ability</defName>
+    <label>neuro overload</label>
+    <description>Momentarily disrupt motor function in the target's brain, preventing any movement.</description>
+    <iconPath>UI/Gizmos/RemoteRepair</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc3</hotKey>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <cooldownTicksRange>700~100</cooldownTicksRange>
+    <statBases>
+      <Ability_Duration>500</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+      <warmupTime>0.25</warmupTime>
+      <rangeStat>NeuroOverloaderCastingDistance</rangeStat>
+      <range>7.9</range>
+      <targetParams>
+        <canTargetAnimals>False</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+    <li Class = "FallenAngel.CompProperties_HasCorrectGene">
+        <requiredGene>Gene_ObsessiveBonding</requiredGene>
+      </li>
+     <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>FA_NeuroOverLoad</hediffDef>
+        <durationMultiplier>NeuroOverloaderDurarationMultiplier</durationMultiplier>
+        <psychic>False</psychic>
+        <applicableToMechs>False</applicableToMechs>
+      </li>
+      <li Class = "FallenAngel.CompProperties_AbilityAffectionCost">
+        <affectionCost>0.2</affectionCost>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+
+
+  <AbilityDef ParentName="FA_CombatPsycast">
+    <defName>FA_CastExplosion</defName>
+    <label>launch explosive ball</label>
+    <description>Use a hemogenic chemical reaction to launch a bony spine at the target. The spine exits through the skin from an opening between the collarbones. Given the method of launch, it is surprisingly easy to aim.</description>
+    <iconPath>UI/Abilities/PiercingSpine</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10.9</range>
+      <!--<rangeStat>FA_CastExplosionDistance</rangeStat>-->
+      <ai_AvoidFriendlyFireRadius>1.9</ai_AvoidFriendlyFireRadius>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+             <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_Plasma_ball_angel</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+    <AbilityDef ParentName="FA_CombatPsycast">
+    <defName>FA_BreathFire_Ability</defName>
+    <label>launch explosive ball</label>
+    <description>Use a hemogenic chemical reaction to launch a bony spine at the target. The spine exits through the skin from an opening between the collarbones. Given the method of launch, it is surprisingly easy to aim.</description>
+    <iconPath>UI/Abilities/PiercingSpine</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10.9</range>
+      <warmupTime>0.5</warmupTime>
+              <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+        <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>7.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_FlammableBile</filthDef>
+        <effecterDef>Fire_Spew</effecterDef>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+</Defs>

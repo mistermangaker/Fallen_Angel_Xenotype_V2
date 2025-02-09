@@ -14,6 +14,23 @@ namespace FallenAngel
 {
     public static class FallenAngel_Utility
     {
+
+        
+
+        public static bool HasAffectionGene(Pawn pawn)
+        {
+            if (ModsConfig.BiotechActive && pawn.Faction.IsPlayerSafe())
+            {
+                Gene gene = GetAffectionGene(pawn);
+                if (gene != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private static int minOpinionToBeComfortableKissing => FallenAngel_ModSettings.defaultOpinionForNegativeMoodFromKissing;
         private static int affectionOpinionGainBuff => FallenAngel_ModSettings.defaultAffectionGainBuff;
 
@@ -229,15 +246,26 @@ namespace FallenAngel
         }
 
 
-       
-      
+        public static void OffsetAffectionSocial(Pawn pawn, float offset)
+        {
+
+            Gene_Affection gene_Hemogen = pawn.genes?.GetFirstGeneOfType<Gene_Affection>();
+
+            if (gene_Hemogen != null)
+            {
+                gene_Hemogen.Value += (offset* pawn.GetStatValue(FA_StatDefOf.FA_AffectionGainFactor));
+            }
+
+        }
+
+
 
         public static float PreAplicationAffectionValue(Pawn initiator, Pawn recipient, float offset, bool applyStatFactor = true)
         {
            
             float InitiatorOpinionOfRecipient = initiator.relations.OpinionOf(recipient);
             float RecipientOpinionOfInitiator = recipient.relations.OpinionOf(initiator);
-            float num1 = ((InitiatorOpinionOfRecipient/2) + RecipientOpinionOfInitiator + affectionOpinionGainBuff) / 100;
+            float num1 = (InitiatorOpinionOfRecipient + RecipientOpinionOfInitiator + affectionOpinionGainBuff) / 100;
             // the code below prevents anything from sending the original value below -0.4 or above 2
             num1 = Mathf.Clamp(num1, -0.4f, 2);
             float num2 = 1 + num1;

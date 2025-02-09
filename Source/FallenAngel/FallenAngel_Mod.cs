@@ -30,17 +30,18 @@ namespace FallenAngel
             listing_Standard.Label("mod settings");
             listing_Standard.Label("modifiers");
             listing_Standard.Label("affection general gain modifier: " + FallenAngel_ModSettings.affectionGeneralGainMultiplyer);
-            FallenAngel_ModSettings.affectionGeneralGainMultiplyer = (float)listing_Standard.Slider(FallenAngel_ModSettings.affectionGeneralGainMultiplyer, 0f, 5f);
+            FallenAngel_ModSettings.affectionGeneralGainMultiplyer = (float)(double)listing_Standard.Slider(FallenAngel_ModSettings.affectionGeneralGainMultiplyer, 0f, 5f);
             listing_Standard.Label("affection kiss gain modifier: " + FallenAngel_ModSettings.affectionKissGainMultiplyer);
-            FallenAngel_ModSettings.affectionKissGainMultiplyer = (float)listing_Standard.Slider(FallenAngel_ModSettings.affectionKissGainMultiplyer, 0f, 5f);
+            FallenAngel_ModSettings.affectionKissGainMultiplyer = (float)(double)listing_Standard.Slider(FallenAngel_ModSettings.affectionKissGainMultiplyer, 0f, 5f);
             listing_Standard.Label("feeding cool down modifier: " + FallenAngel_ModSettings.feedAgainDuractionCoolDownMultiplyer);
-            FallenAngel_ModSettings.feedAgainDuractionCoolDownMultiplyer = (float)listing_Standard.Slider(FallenAngel_ModSettings.feedAgainDuractionCoolDownMultiplyer, 0.1f, 5f);
+            FallenAngel_ModSettings.feedAgainDuractionCoolDownMultiplyer = (float)(double)listing_Standard.Slider(FallenAngel_ModSettings.feedAgainDuractionCoolDownMultiplyer, 0.1f, 5f);
             listing_Standard.Label("resource drain rate modifier: " + FallenAngel_ModSettings.resourceDrainRatePerdayMultiplier);
-            FallenAngel_ModSettings.resourceDrainRatePerdayMultiplier = (float)listing_Standard.Slider(FallenAngel_ModSettings.resourceDrainRatePerdayMultiplier, 0f, 5f);
+            FallenAngel_ModSettings.resourceDrainRatePerdayMultiplier = (float)(double)listing_Standard.Slider(FallenAngel_ModSettings.resourceDrainRatePerdayMultiplier, 0f, 5f);
             listing_Standard.Label("modifiers");
             listing_Standard.Label("opinion threshold for comfortable kiss: " + FallenAngel_ModSettings.defaultOpinionForNegativeMoodFromKissing);
             FallenAngel_ModSettings.defaultOpinionForNegativeMoodFromKissing = (int)listing_Standard.Slider(FallenAngel_ModSettings.defaultOpinionForNegativeMoodFromKissing, -100, 100);
             listing_Standard.CheckboxLabeled("Disable Low opinion Warning pop up for kissing", ref FallenAngel_ModSettings.disableOpinionPopUpForKissing);
+            listing_Standard.CheckboxLabeled("Disable alert for lovin' psychic blast", ref FallenAngel_ModSettings.disableAlertForLovingPsychicBlast);
             listing_Standard.End();
             base.DoSettingsWindowContents(inRect);
         }
@@ -60,6 +61,7 @@ namespace FallenAngel
         public static int defaultOpinionForNegativeMoodFromKissing = 20;
         public static int defaultAffectionGainBuff = 0;
         public static bool disableOpinionPopUpForKissing = false;
+        public static bool disableAlertForLovingPsychicBlast = false;
 
 
 
@@ -73,6 +75,7 @@ namespace FallenAngel
             Scribe_Values.Look(ref defaultOpinionForNegativeMoodFromKissing, "defaultOpinionForNegativeMoodFromKissing", 20);
             Scribe_Values.Look(ref defaultAffectionGainBuff, "defaultAffectionGainBuff", 0);
             Scribe_Values.Look(ref disableOpinionPopUpForKissing, "disableOpinionPopUpForKissing", false);
+            Scribe_Values.Look(ref disableAlertForLovingPsychicBlast, "disableAlertForLovingPsychicBlast", false);
             base.ExposeData();
         }
     }

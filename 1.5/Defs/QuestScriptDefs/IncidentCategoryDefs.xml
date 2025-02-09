@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IncidentCategoryDef>
+        <defName>GiveAngelQuest</defName>
+        <needsParmsPoints>true</needsParmsPoints>
+    </IncidentCategoryDef>
+
+<IncidentDef ParentName="GiveQuestBase">
+    <defName>GiveQuest_FallenAngel</defName>
+    <label>angel raid</label>
+    <questScriptDef>Angelthreatreward</questScriptDef>
+    <baseChance>1</baseChance> <!-- given by a special storyteller comp -->
+  </IncidentDef>
+  
+  <IncidentDef ParentName="GiveQuestBase">
+    <defName>GiveQuest_Intro_FallenAngel</defName>
+    <label>the problem angel</label>
+    <questScriptDef>Intro_FallenAngel</questScriptDef>
+    <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+  </IncidentDef>
+
+
+</Defs>

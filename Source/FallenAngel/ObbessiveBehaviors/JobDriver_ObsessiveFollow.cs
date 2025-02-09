@@ -33,7 +33,7 @@ namespace FallenAngel
         {
             
 
-            Toil followTarget = ToilMaker.MakeToil("DateFollowPartner");
+            Toil followTarget = ToilMaker.MakeToil("FollowAndChat");
             followTarget.defaultCompleteMode = ToilCompleteMode.Delay;
             followTarget.initAction = delegate
             {

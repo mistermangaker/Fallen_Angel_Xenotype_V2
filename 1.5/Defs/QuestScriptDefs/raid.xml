@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <QuestScriptDef>
+    <defName>Angelthreatreward</defName>
+    <rootSelectionWeight>0</rootSelectionWeight>
+    <rootMinPoints>0</rootMinPoints>
+    <expireDaysRange>3</expireDaysRange>
+    <defaultChallengeRating>1</defaultChallengeRating>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->uwu</li>
+        
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->uwu</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_SubScript">
+          <def>Util_RandomizePointsChallengeRating</def>
+        </li>
+        <li Class="QuestNode_SubScript">
+          <def>Util_GetDefaultRewardValueFromPoints</def>
+        </li>
+        <li Class="QuestNode_GetMap" />
+
+        <!-- Get a walk-in spot so joiner and raid come from the same spot -->
+        <li Class="QuestNode_GetWalkInSpot" /> 
+
+        <li Class="QuestNode_Set">
+          <name>raidDelayTicks</name>
+          <value>$(roundToTicksRough(randInt(50, 100)))</value>
+        </li>
+        <li Class="QuestNode_Delay">
+          <delayTicks>$raidDelayTicks</delayTicks>
+          <node Class="QuestNode_SubScript">
+            <def>Util_Raid</def>
+            <prefix>raid</prefix>
+            <parms>
+              <inSignal>$inSignal</inSignal>
+              <map>$map</map>
+              <points>$points</points>
+              <enemyFaction>FA_FallenAngelsHostile</enemyFaction>
+              <walkInSpot>$walkInSpot</walkInSpot>
+              <customLetterLabel TKey="LetterLabelChasing">{BASELABEL}</customLetterLabel>
+              <customLetterText TKey="LetterTextChasing">{BASETEXT}</customLetterText>
+            </parms>
+          </node>
+        </li>
+        <li Class="QuestNode_AllSignals">
+          <inSignals>
+            
+            <li>raid.EndRaid</li>
+
+          </inSignals>
+          
+        </li>
+        <!--<li Class="QuestNode_Delay">
+        <delayTicks>1200</delayTicks>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_GiveRewards">
+                <parms>
+                  <allowGoodwill>true</allowGoodwill>
+                  <allowRoyalFavor>true</allowRoyalFavor>
+                  <thingRewardRequired>true</thingRewardRequired>
+                  <thingRewardItemsOnly>true</thingRewardItemsOnly>
+                </parms>
+              </li>
+              <li Class="QuestNode_SendSignals">
+                <outSignals>RewardGiven</outSignals>
+              </li>
+            </nodes>
+          </node>
+        </li>-->
+        <!-- End -->
+        <li Class="QuestNode_AllSignals">
+          <inSignals>
+            <li>RewardGiven</li>
+            
+
+          </inSignals>
+          <node Class="QuestNode_End" />
+        </li>
+
+        </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

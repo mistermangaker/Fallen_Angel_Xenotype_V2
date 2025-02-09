@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+     <ThingDef Abstract="True" Name="FA_FallenAngel_Upgrades">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <techLevel>Archotech</techLevel>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <isTechHediff>true</isTechHediff>
+    <thingCategories>
+      <li>FA_Upgrades</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+        <techHediffsTags>
+      <li>FA_defTag</li>
+    </techHediffsTags>
+  </ThingDef>
+
+      <ThingDef ParentName="FA_FallenAngel_Upgrades">
+    <defName>FA_NeuroOverLoader_Implant</defName>
+    <label>neuro overloader implant</label>
+    <description>A neural implant which gives a Fallen Angel the ability to overwhelm a person's cortex with stimulation. Giving them an extreme sense of euphoria and pleasure while briefly stunning them for sometime while. Overuse of this ability can easily kill someone</description>
+      <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="FallenAngel.CompProperties_GeneUsable">
+        <compClass>FallenAngel.CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant Neuro Overloader</useLabel>
+        <requiredGene>Gene_ObsessiveBonding</requiredGene>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_NeuroOverLoader_Hediff</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>2</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+<ThingDef ParentName="FA_FallenAngel_Upgrades">
+    <defName>FA_CastExplosion_Implant</defName>
+    <label>neuro overloader implant</label>
+    <description>A neural implant which gives a Fallen Angel the ability to overwhelm a person's cortex with stimulation. Giving them an extreme sense of euphoria and pleasure while briefly stunning them for sometime while. Overuse of this ability can easily kill someone</description>
+      <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="FallenAngel.CompProperties_GeneUsable">
+        <compClass>FallenAngel.CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant Neuro Overloader</useLabel>
+        <requiredGene>FA_Gene_Affection</requiredGene>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_CastExplosion_Hediff</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>4</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+<!--social-->
+<ThingDef Name="FA_FallenAngel_SocialImplants" ParentName="FA_FallenAngel_Upgrades" Abstract="True">
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <comps>
+        <li Class="FallenAngel.CompProperties_GeneUsable">
+        <compClass>FallenAngel.CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant Neuro Overloader</useLabel>
+        <requiredGene>Gene_Loving</requiredGene>
+      </li>
+    </comps>
+</ThingDef>
+
+  <ThingDef ParentName="FA_FallenAngel_SocialImplants">
+    <defName>FA_ImmunityGain_Implant</defName>
+    <label>psychic immunity booster implant</label>
+    <description>placeholder</description>
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_ImmunityGain_HediffImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>4</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="FA_FallenAngel_SocialImplants">
+    <defName>FA_PsychicJoyFuzz_Implant</defName>
+    <label>psychic bliss implant</label>
+    <description>placeholder</description>
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_PsychicJoyFuzz_HediffImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>4</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <ThingDef ParentName="FA_FallenAngel_SocialImplants">
+    <defName>FA_FertilityBoost_Implant</defName>
+    <label>psychic fertility booster implant</label>
+    <description>placeholder</description>
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_FertilityBoost_HediffImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>4</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <ThingDef ParentName="FA_FallenAngel_SocialImplants">
+    <defName>FA_SocialBoost_Implant</defName>
+    <label>psychic social booster implant</label>
+    <description>placeholder</description>
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_SocialBoost_HediffImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  
+
+
+<!--
+   <ThingDef ParentName="FA_FallenAngel_Upgrades">
+    <defName>FA_PychicScream</defName>
+    <label>pychic scream implant</label>
+    <description>placeholder</description>
+      <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="FallenAngel.CompProperties_GeneUsable">
+        <compClass>FallenAngel.CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant Neuro Overloader</useLabel>
+        <requiredGene>FA_Gene_Affection</requiredGene>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>FA_CastExplosion_Hediff</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>4</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+-->
+
+
+</Defs>

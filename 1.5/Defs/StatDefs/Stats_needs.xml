@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--needfall stats-->
+
+    <StatDef>
+        <defName>FA_SocialNeedFallRateFActor</defName>
+        <label>social need fall rate factor</label>
+        <description>A multiplier on the speed that a person's socializing need falls.</description>
+        <category>FallenAngelStats</category>
+        <toStringStyle>PercentZero</toStringStyle>
+        <defaultBaseValue>1</defaultBaseValue>
+        <hideAtValue>1</hideAtValue>
+        <minValue>0.0001</minValue>
+        <showOnAnimals>false</showOnAnimals>
+    </StatDef>
+
+
+
+
+</Defs>

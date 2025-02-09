@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+    <defName>FA_ImmunityGain_Hediif</defName>
+    <label>psychic immunity boost</label>
+    <description>placeholder</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <deprioritizeHealing>true</deprioritizeHealing>
+    <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+            <RestFallRateFactor>-0.2</RestFallRateFactor>
+            <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>6000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+    <HediffDef>
+        <defName>FA_JoyFuzz_Hediff</defName>
+        <label>psychically induced happiness</label>
+        <description>placeholder</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <deprioritizeHealing>true</deprioritizeHealing>
+        <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+        <stages>
+        <li>
+            <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>-0.05</offset>
+            </li>
+            </capMods>
+        </li>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disappears">
+            <disappearsAfterTicks>6000</disappearsAfterTicks>
+            <showRemainingTime>true</showRemainingTime>
+        </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FA_FertilityBoost_Hediif</defName>
+        <label>psychic immunity boost</label>
+        <description>placeholder</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <deprioritizeHealing>true</deprioritizeHealing>
+        <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+        <stages>
+        <li>
+            <statOffsets>
+                <Fertility>0.5</Fertility>
+            </statOffsets>
+            <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>-0.05</offset>
+            </li>
+            </capMods>
+        </li>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disappears">
+            <disappearsAfterTicks>24000</disappearsAfterTicks>
+            <showRemainingTime>true</showRemainingTime>
+        </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FA_SocialBoost_Hediff</defName>
+        <label>psychic social boost</label>
+        <description>placeholder</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <deprioritizeHealing>true</deprioritizeHealing>
+        <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+        <stages>
+        <li>
+            <statOffsets>
+                <NegotiationAbility>0.1</NegotiationAbility>
+                <TradePriceImprovement>0.1</TradePriceImprovement>
+                <SocialImpact>0.1</SocialImpact>
+                <ArrestSuccessChance>0.1</ArrestSuccessChance>
+            </statOffsets>
+            <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>-0.05</offset>
+            </li>
+            </capMods>
+        </li>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disappears">
+            <disappearsAfterTicks>24000</disappearsAfterTicks>
+            <showRemainingTime>true</showRemainingTime>
+        </li>
+        </comps>
+    </HediffDef>
+
+      <HediffDef>
+    <defName>FA_NeuroOverLoad</defName>
+    <label>neuro overload</label>
+    <description>the brain can brain is currently feeling euphoric</description>
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>True</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
+    <stages>
+      <li>
+      <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      <statOffsets>
+        <MoveSpeed>-0.3</MoveSpeed>
+        <GeneralLaborSpeed>-0.2</GeneralLaborSpeed>
+      </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+
+</Defs>

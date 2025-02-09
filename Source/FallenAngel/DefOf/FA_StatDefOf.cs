@@ -18,7 +18,8 @@ namespace FallenAngel
         }
 
         public static StatDef FA_AffectionGainFactor;
-   
+        public static StatDef FA_SocialNeedFallRateFActor;
+
 
 
     }

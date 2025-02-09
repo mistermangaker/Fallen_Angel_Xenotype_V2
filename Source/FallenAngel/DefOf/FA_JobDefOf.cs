@@ -22,6 +22,7 @@ namespace FallenAngel
 
         public static JobDef FA_ObsessiveWatchInBed;
         public static JobDef FA_ObsessiveSleepInOthersBed;
+        public static JobDef FA_SocializeGather;
         
 
     }

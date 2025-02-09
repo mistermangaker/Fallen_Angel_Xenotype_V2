@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -53,9 +57,11 @@
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +71,10 @@
     <Compile Include="Affection\CompProperties_AbilityAffectionCost.cs" />
     <Compile Include="Affection\CompProperties_AbilityGiveSmoochies.cs" />
     <Compile Include="Affection\FallenAngel_Utility.cs" />
+    <Compile Include="CompAbility_OffsetSocialNeed.cs" />
+    <Compile Include="CompProperties_HasCorrectGene.cs" />
+    <Compile Include="CompProperties_OffsetSocialNeed.cs" />
+    <Compile Include="compusable.cs" />
     <Compile Include="DefOf\FA_DefOfSmoochLocations.cs" />
     <Compile Include="DefOf\FA_GeneDefOf.cs" />
     <Compile Include="DefOf\FA_HediffDefOf.cs" />
@@ -75,6 +85,13 @@
     <Compile Include="Affection\Gene_Affection.cs" />
     <Compile Include="Affection\Gene_Gizmo_ResourceAffection.cs" />
     <Compile Include="FallenAngel_Mod.cs" />
+    <Compile Include="InteractionWorker_AffectionChitChat.cs" />
+    <Compile Include="HramonyPatches\Main.cs" />
+    <Compile Include="SocialNeed\JobDriver_SocializeGathering.cs" />
+    <Compile Include="SocialNeed\JobGiver_GetSocial.cs" />
+    <Compile Include="SocialNeed\JobGiver_tempSocializeGathering.cs" />
+    <Compile Include="SocialNeed\Need_Social.cs" />
+    <Compile Include="NewInteractionWorkers.cs" />
     <Compile Include="ObbessiveBehaviors\JobDriver_LayInObsessivesBed.cs" />
     <Compile Include="ObbessiveBehaviors\JobDriver_ObsessiveFollow.cs" />
     <Compile Include="ObbessiveBehaviors\JobDriver_ObsessiveWatchInBed.cs" />
@@ -88,21 +105,28 @@
     <Compile Include="Affection\HediffComp_SeverityFromAffection.cs" />
     <Compile Include="Affection\Hediff_AffectionCraving.cs" />
     <Compile Include="Affection\JobDriver_GetAffection.cs" />
-    <Compile Include="JobDriver_TargetedInteractionSpree.cs" />
+    <Compile Include="MentalStates\JobDriver_TargetedInteractionSpree.cs" />
     <Compile Include="Affection\JobGiver_GetAffection.cs" />
-    <Compile Include="JobGiver_TargetedInteractionSpree.cs" />
-    <Compile Include="MentalState_TargetedInteraction.cs" />
-    <Compile Include="MentalState_TargetedInteractionSpree.cs" />
-    <Compile Include="NoColorApparel.cs" />
+    <Compile Include="MentalStates\JobGiver_TargetedInteractionSpree.cs" />
+    <Compile Include="MentalStates\MentalState_TargetedInteraction.cs" />
+    <Compile Include="MentalStates\MentalState_TargetedInteractionSpree.cs" />
+    <Compile Include="Misc\NoColorApparel.cs" />
     <Compile Include="obessivebonding\Hediff_ObessiveBond_Giver.cs" />
     <Compile Include="obessivebonding\Hediff_ObsessiveBond_Base.cs" />
     <Compile Include="obessivebonding\Hediff_ObsessiveBond_Receiver.cs" />
     <Compile Include="obessivebonding\MentalState_ObsessiveBondForm.cs" />
     <Compile Include="obessivebonding\ObsessiveBondingUtility.cs" />
     <Compile Include="obessivebonding\ThoughtWorker_GiverIsUnhappy.cs" />
-    <Compile Include="Placeworker_OnGroundOnly.cs" />
-    <Compile Include="Placeworker_OnWall.cs" />
+    <Compile Include="Misc\Placeworker_OnGroundOnly.cs" />
+    <Compile Include="Misc\Placeworker_OnWall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialNeed\SocialGiver.cs" />
+    <Compile Include="SocialNeed\SocialGiverDef.cs" />
+    <Compile Include="SocialNeed\SocialGiver_SocializeGathering.cs" />
+    <Compile Include="SocialNeed\SocialKindDef.cs" />
+    <Compile Include="SocialNeed\SocialNeed_Utility.cs" />
+    <Compile Include="SocialNeed\ThinkNode_Priority_GetSocial.cs" />
+    <Compile Include="StatWorker_FallenAngel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

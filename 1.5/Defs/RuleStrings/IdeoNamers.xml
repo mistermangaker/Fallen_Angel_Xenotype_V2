@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--
+  <MemeDef>
+    <defName>Structure_Angel</defName>
+    <label>archist</label>
+    <description>Archotechs are the true gods. They know the moral structure of the universe, and serving them is how we will connect with it.</description>
+    <category>Structure</category>
+    <iconPath>UI/Structures/Archist</iconPath>
+    <impact>0</impact>
+    <randomizationSelectionWeightFactor>3</randomizationSelectionWeightFactor>
+    <deityCount>0</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->archic</li>
+        <li>memeAdjective->archotechnic</li>
+        <li>memeAdjective->archonic</li>
+        <li>memeHyphenPrefix->archo</li>
+        <li>memeHyphenPrefix->arch</li>
+        <li>memeLeaderNoun->archist</li>
+        <li>memeLeaderNoun->archotechnist</li>
+        <li>memeLeaderAdjective->archic</li>
+        <li>memeLeaderAdjective->exochrome</li>
+        <li>memeMoralist->priest</li>
+        <li>memeMoralist->cleric</li>
+        <li>memeMoralist->rector</li>
+        <li>memeMoralist->abbot</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>FallenAngel_IdeoNamer</def></li>
+      </patterns>
+      
+    </descriptionMaker>
+    <worshipRoomLabel>shrine</worshipRoomLabel>
+    <symbolPacks>
+      <li>
+        <ideoName>Archotechnics</ideoName>
+        <theme>archotechnology</theme>
+        <adjective>archotechnic</adjective>
+        <member>archotechnist</member>
+      </li>
+      <li>
+        <ideoName>Archism</ideoName>
+        <theme>archism</theme>
+        <adjective>archist</adjective>
+        <member>archist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+
+
+
+
+<IdeoStoryPatternDef>
+    <defName>FallenAngel_IdeoNamer</defName>
+    <segments>
+        <li>FallenAngelBeginning</li>
+        <li>FallenAngelMiddle</li>
+        <li>FallenAngelEnd</li>
+
+    </segments>
+    <rules>
+      <include>
+        <li>IdeoDescriptionGlobal</li>
+      </include>
+      <rulesStrings>
+        <li>FallenAngelBeginning->uwu.</li>
+        <li>FallenAngelMiddle->uwu.</li>
+        <li>FallenAngelEnd->uwu.</li>
+
+       
+
+      </rulesStrings>
+    </rules>
+  </IdeoStoryPatternDef>
+
+  -->
+</Defs>

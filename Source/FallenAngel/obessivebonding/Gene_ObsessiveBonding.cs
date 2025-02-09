@@ -12,7 +12,7 @@ using static RimWorld.Building_HoldingPlatform;
 namespace FallenAngel
 {
 
-    public class Gene_ObsessiveBonding : Gene, IGeneResourceDrain
+    public class Gene_ObsessiveBonding : Gene, IGeneResourceDrain 
     {
         // genes that is based off of rimworlds pyschic bonding gene but for fallen angels
         // should go as follows
@@ -21,6 +21,8 @@ namespace FallenAngel
         // the bonded pawn should be someone the giver is attracted to
         [Unsaved(false)]
         private Gene_Affection cachedGene_Affection;
+
+        
 
 
         public bool CanOffset

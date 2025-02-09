@@ -23,6 +23,7 @@ namespace FallenAngel
         public static ThoughtDef FA_FedOnBy_Social;
         public static ThoughtDef FA_ObsessiveBondReceiver;
         public static ThoughtDef FA_ObsessiveBondGiver;
+        public static ThoughtDef FA_PychicBlast;
 
 
     }

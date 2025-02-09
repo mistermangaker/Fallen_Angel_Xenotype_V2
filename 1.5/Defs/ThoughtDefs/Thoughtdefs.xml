@@ -13,6 +13,19 @@
     </stages>
   </ThoughtDef>
 
+  <ThoughtDef>
+    <defName>FA_PychicBlast</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>Pychic Blast</label>
+        <description>It's like a scratching at the back of my mind.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
     <ThoughtDef>
     <defName>FA_FedOnBy_Social</defName>
     <thoughtClass>Thought_MemorySocial</thoughtClass>
@@ -255,6 +268,38 @@
       </li>
     </stages>
   </ThoughtDef>
+
+  <!--upgrades-->
+   <ThoughtDef>
+    <defName>FA_JoyFuzz_ThoughtDef</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>FA_JoyFuzz_Hediff</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>pychic bliss</label>
+        <description>this feels nice</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+   <ThoughtDef>
+    <defName>FA_NeuroOverLoad_ThoughtDef</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>FA_NeuroOverLoad</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>neuro overload</label>
+        <description>Hrrrrrrng~~~~~~!</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
 
 
 </Defs>

@@ -35,8 +35,21 @@
         <thinkRoot Class="ThinkNode_Priority">
             <subNodes>
                 <li Class="FallenAngel.JobGiver_GetAffection" />
+                <li Class="FallenAngel.JobGiver_GetSocial" />
             </subNodes>
         </thinkRoot>
     </ThinkTreeDef>
+
+
+    <!--<ThinkTreeDef>
+        <defName>FA_SatisfyingNeeds</defName>
+        <insertTag>SatisfyingNeeds</insertTag>
+        <insertPriority>100</insertPriority>
+        <thinkRoot Class="FallenAngel.ThinkNode_Priority_GetSocial">
+            <subNodes>
+                <li Class="FallenAngel.SocialGiver_SocializeGathering" />
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>-->
 </Defs>
 

@@ -17,7 +17,7 @@ namespace FallenAngel
         {
             get
             {
-                Gene_Hemogen gene_Hemogen = parent.pawn.genes?.GetFirstGeneOfType<Gene_Hemogen>();
+                Gene_Affection gene_Hemogen = parent.pawn.genes?.GetFirstGeneOfType<Gene_Affection>();
                 if (gene_Hemogen == null || gene_Hemogen.Value < Props.affectionCost)
                 {
                     return false;
@@ -29,12 +29,14 @@ namespace FallenAngel
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            GeneUtility.OffsetHemogen(parent.pawn, 0f - Props.affectionCost);
+            FallenAngel_Utility.OffsetAffection(parent.pawn, 0f - Props.affectionCost);
+          
+            //GeneUtility.OffsetHemogen(parent.pawn, 0f - Props.affectionCost);
         }
 
         public override bool GizmoDisabled(out string reason)
         {
-            Gene_Hemogen gene_Hemogen = parent.pawn.genes?.GetFirstGeneOfType<Gene_Hemogen>();
+            Gene_Affection gene_Hemogen = parent.pawn.genes?.GetFirstGeneOfType<Gene_Affection>();
             if (gene_Hemogen == null)
             {
                 reason = "AbilityDisabledNoHemogenGene".Translate(parent.pawn);

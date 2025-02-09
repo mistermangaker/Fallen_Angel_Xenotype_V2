@@ -1,13 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-     <StatDef>
+<StatCategoryDef>
+    <defName>FallenAngelStats</defName>
+    <label>Fallen angel</label>
+    <displayOrder>105</displayOrder>
+    <displayAllByDefault>true</displayAllByDefault>
+  </StatCategoryDef>
+
+  
+
+  <StatDef Abstract="True" Name="FallenAngelStatBase">
+    <workerClass>FallenAngel.StatWorker_FallenAngel</workerClass>
+    <category>FallenAngelStats</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnHumanlikes>true</showOnHumanlikes>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>2000</displayPriorityInCategory>
+    <showIfUndefined>true</showIfUndefined>
+  </StatDef>
+
+  
+  <StatDef>
     <defName>FA_AffectionGainFactor</defName>
     <label>hemogen gain multiplier</label>
     <description>A multiplier on the amount of hemogen gained.</description>
-    <category>BasicsPawn</category>
+    <category>FallenAngelStats</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
     <hideAtValue>1</hideAtValue>
   </StatDef>
+
+  
 
 </Defs>

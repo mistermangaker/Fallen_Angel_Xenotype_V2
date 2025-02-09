@@ -3,10 +3,9 @@
 <FA_Title>Fallen Angel Mod Settings</FA_Title>
     <FA_Placeworker_OnGroundOnlyCantPlaceOnWall>Can't be built here can't be built over wall</FA_Placeworker_OnGroundOnlyCantPlaceOnWall>
     <FA_Placeworker_OnGroundOnlyTooCloseToMapEdge>Too close to map edge.</FA_Placeworker_OnGroundOnlyTooCloseToMapEdge>
-
     <FA_PlaceWorker_OnWall>Can't be placed here. Needs to be placed on a wall or impassable surface</FA_PlaceWorker_OnWall>
 
-    
+    <FeltPsychicBlast>A strange localized psychic event just occurred centered on {PAWN}. Effecting everyone around them with a negative psychic blast</FeltPsychicBlast>
     <FA_LetterObssessiveBondFormed>{0} has suffered with an extreme lack of affction and attantion from other colonists. as a result {0} has developed and psychic obsession with another colonist and has linked with them. {0} is refusing to break the bond no matter what</FA_LetterObssessiveBondFormed>
   
 
